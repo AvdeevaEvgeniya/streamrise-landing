@@ -1,0 +1,49 @@
+.product
+  border-radius: var(--radius)
+  background: var(--color2)
+  padding: 3rem
+  display: grid
+  gap: 3rem
+  grid-auto-rows: auto 1fr
+  //align-content: space-between
+  &__title
+    border-radius: 14px
+    font-family: "square721"
+    font-size: 3.5rem
+    text-align: center
+    justify-self: center
+    background: var(--color1)
+    width: calc(100% - 6rem)
+    padding: 7px 2rem
+    min-width: fit-content
+    &._blue
+      background: #5492FF
+    &._orange
+      background: #FFAA32
+    &._purple
+      background: #B444B2
+    &._green
+      background: #07CA55
+  &__num
+    font-size: 3.8rem
+    font-weight: 600
+    text-align: center
+
+.product-slider
+  position: relative
+  .swiper-wrapper
+    align-items: stretch
+  .swiper-slide
+    height: auto
+  .swiper-button-prev
+    left: 2.5rem
+    &:after
+      content: "\e909"
+  .swiper-button-next
+    right: 2.5rem
+    &:after
+      content: "\e908"
+  .swiper-pagination
+    display: none
+
+@import "media"

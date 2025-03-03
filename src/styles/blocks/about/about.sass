@@ -1,0 +1,25 @@
+.about
+  position: relative
+  &__main
+    display: grid
+    gap: 6rem
+  &__text
+    max-width: 80rem
+    position: relative
+    z-index: 2
+  &__img
+    position: absolute
+    bottom: 0
+    max-height: 100%
+    right: var(--offset)
+    pointer-events: none
+    max-width: 42%
+    z-index: 1
+  &__bg
+    position: absolute
+    top: 0
+    right: 15%
+    pointer-events: none
+    max-width: 42%
+
+@import "media"

@@ -1,0 +1,32 @@
++widescreen()
+  .page-body
+    grid-template-columns: initial
+
++notebook()
+  .inner._pt
+    padding-top: 12rem
+  .page-header
+    margin-bottom: 4rem
+
++tablet()
+  .section
+    &__title
+      p
+        font-size: 16px
+    &__header
+      align-items: flex-end
+
++mobile()
+  .section
+    &__header
+      display: grid
+  .page-header
+    display: grid
+    justify-items: start
+
++small-mobile()
+  .inner._pt
+    padding-top: 9rem
+  .page-header
+    margin-bottom: 3rem
+    gap: 2rem

@@ -1,0 +1,43 @@
+.services
+  display: grid
+  gap: 5rem
+  &__line
+    +flex(row wrap, center, center)
+    gap: 5rem 9rem
+    &._mini
+      gap: 5rem 6rem
+
+.service-icon
+  +flex(row nowrap, center, center)
+  border-radius: 12px
+  border: 1px solid
+  height: 9.5rem
+  padding: 2rem 5rem
+  background: white
+  flex-basis: 43rem
+  max-width: calc(33.33% - 6rem)
+  img
+    max-height: 100%
+  &._twitch
+    background: var(--bg-twitch)
+  &._kick
+    background: var(--bg-kick)
+  &._discord
+    background: #5165F6
+  &._dlive
+    background: #FFD300
+  &._mini
+    height: 7rem
+    flex-basis: 28rem
+    padding: 10px 5rem
+  &._tiny
+    border-radius: 6px
+    height: 4.4rem
+    width: 100%
+    padding: 5px 10px
+    flex-basis: initial
+    max-width: 100%
+  &._active
+    box-shadow: 0 0 2.5rem var(--color1)
+
+@import "media"

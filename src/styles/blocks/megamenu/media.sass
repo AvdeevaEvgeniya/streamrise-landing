@@ -1,0 +1,29 @@
++tablet()
+  .megamenu
+    &__drop
+      min-width: calc(100vw - var(--offset) * 2)
+
++mobile()
+  .megamenu
+    &:after
+      content: none
+    &__drop
+      position: static
+      padding: 2.5rem
+      margin-top: 15px
+    &__list
+      padding: 0
+      border: none
+      width: 100%
+    &__sublist
+      position: static
+      max-width: 100%
+      padding-top: 3rem
+      padding-bottom: 10px
+      gap: 0
+      a
+        padding: 10px 2.5rem
+        margin: 0 -2.5rem
+    &__title
+      padding: 0
+      text-align: left

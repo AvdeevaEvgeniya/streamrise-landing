@@ -1,0 +1,18 @@
+extends ../layout/layout
+block title
+    | index
+block head
+block content
+    .order-page.inner._pt
+        .page-header
+            h1.h2 Оформление заказа
+            .balance
+                .info
+                    .info__label Баланс:
+                    .info__value.color 11.800₽
+                a.btn._low._mob-fit(href="") Пополнить
+        .page-body.mb-20
+            include _order
+            include _sidebar
+block end
+

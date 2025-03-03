@@ -1,0 +1,296 @@
+h1, h2, h3, h4, h5, h6, p
+  font-weight: inherit
+  font-size: inherit
+  margin: 0
+
+p
+  letter-spacing: 0.02em
+  line-height: 1.5
+  font-size: 16px
+  &._big
+    font-size: 18px
+    line-height: 1.35
+.big-text
+  font-size: 2rem
+  font-weight: 500
+  line-height: 1.5
+.gray
+  color: rgba(255, 255, 255, 0.7)
+
+.square721
+  font-family: "square721"
+  text-transform: uppercase
+
+.h0
+  font-size: 7.3rem
+  letter-spacing: -0.02em
+  font-family: "square721"
+  text-transform: uppercase
+
+.h1, .text h1
+  font-size: 4.8rem
+  letter-spacing: 0.02em
+  font-family: "square721"
+  text-transform: uppercase
+
+.h2, .text h2
+  font-size: 3.5rem
+  letter-spacing: 0.02em
+  font-family: "square721"
+  text-transform: uppercase
+
+.h3, .text h3
+  font-size: 2.4rem
+  letter-spacing: 0.02em
+  font-family: "square721"
+  text-transform: uppercase
+.h3-alt
+  font-size: 2.4rem
+  font-weight: 700
+  letter-spacing: 0.02em
+
+.h4, .text h4
+  font-size: 3.2rem
+  letter-spacing: 1px
+  font-family: "square721"
+
+.h5, .text h5
+  font-size: 2.6rem
+  letter-spacing: 0.02em
+  font-weight: 600
+
+.btn-icon
+  +flex(row nowrap, center, center)
+  font-size: 2.2rem
+  width: 4.5rem
+  min-width: 4.5rem
+  height: 4.5rem
+  border-radius: 100%
+  border: 1px solid
+
+.list
+  display: grid
+  gap: 18px
+  font-size: 18px
+  font-weight: 500
+  list-style-type: none
+  padding: 0
+  align-content: start
+  margin: 0
+  &._color
+    letter-spacing: 0.02em
+    font-weight: 400
+    font-size: 2rem
+    gap: 10px
+    color: rgba(255, 255, 255, 0.7)
+    li
+      &:before
+        color: var(--color1)
+  li
+    position: relative
+    padding-left: 1.6em
+    &:before
+      content: "\e90b"
+      font-family: "icomoon"
+      font-size: 0.55em
+      position: absolute
+      top: 0.5em
+      left: 0
+
+.gradient-color
+  background: linear-gradient(90.03deg, #D46BFD 61.53%, #7221FF 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  text-fill-color: transparent
+
+.color
+  color: var(--color1)
+.color2
+  color: var(--color3)
+.color3
+  color: var(--color-kick)
+
+.unnderline
+  border-bottom: 1px solid
+
+.block-bg
+  border-radius: 4rem
+  padding-top: 15rem
+  padding-bottom: 15rem
+  background-repeat: no-repeat
+  background-position: center left
+  background-size: contain
+  position: relative
+  background-image: linear-gradient(69.81deg, var(--color9) 6.23%, var(--color8) 88.8%)
+  &:after
+    +full()
+    content: ""
+    background: url("../img/pock-1.png") no-repeat center
+    border-radius: 4rem
+    pointer-events: none
+  &._bg1
+    background-image: url("../img/fig-1.png"), linear-gradient(69.81deg, var(--color9) 6.23%, var(--color8) 88.8%)
+  &._bg2
+    background-image: url("../img/fig-2.png"), linear-gradient(69.81deg, var(--color9) 6.23%, var(--color8) 88.8%)
+  &._bg3
+    background-image: url("../img/fig-7.png"), linear-gradient(69.81deg, var(--color9) 6.23%, var(--color8) 88.8%)
+    background-position: right top
+
+.block-bg2
+  border-radius: 4rem
+  padding-top: 10rem
+  padding-bottom: 10rem
+  background: linear-gradient(79.69deg, var(--color8) 7.22%, var(--color9) 115.24%)
+  position: relative
+  &:after
+    +full()
+    content: ""
+    background: url("../img/pock-1.png") no-repeat center
+    border-radius: 4rem
+    pointer-events: none
+
+
+.mb-4
+  margin-bottom: 4rem
+.mb-8
+  margin-bottom: 8rem
+.mb-10
+  margin-bottom: 10rem
+.mb-20
+  margin-bottom: 20rem
+
+.text-3-col
+  +grid(28rem, 1fr, 4rem, 6rem)
+  font-size: 14px
+  font-weight: 500
+  letter-spacing: 0.02em
+  line-height: 1.7
+
+.grid
+  display: grid
+  gap: 5px
+  &._gap-10
+    gap: 10px
+  &._gap-15
+    gap: 15px
+  &._gap-20
+    gap: 2rem
+  &._gap-30
+    gap: 3rem
+  &._gap-40
+    gap: 4rem
+
+.flag
+  height: 2.5rem
+
+.separate
+  border-bottom: 1px solid var(--color11)
+
+.decor
+  position: relative
+  &__img
+    position: absolute
+    z-index: 1
+    pointer-events: none
+    &._bg1
+      width: 21rem
+      right: 14rem
+      bottom: -13rem
+      mix-blend-mode: hard-light
+    &._bg2
+      width: 17.5rem
+      left: 11rem
+      bottom: -13rem
+    &._bg3
+      width: 17.5rem
+      left: 14rem
+      bottom: -9rem
+      mix-blend-mode: hard-light
+    &._bg4
+      width: 10rem
+      right: 3rem
+      top: -6.5rem
+      mix-blend-mode: hard-light
+    &._bg5
+      width: 17rem
+      left: 7.5rem
+      bottom: -7.5rem
+      mix-blend-mode: hard-light
+    &._bg6
+      left: -30%
+      bottom: -30%
+      z-index: -1
+      max-width: initial
+    &._bg7
+      right: -30%
+      top: -50%
+      z-index: -1
+      max-width: initial
+    &._bg8
+      left: -30%
+      top: -30%
+      z-index: -1
+      max-width: initial
+    &._bg9
+      width: 17.5rem
+      right: 0
+      top: -10rem
+    &._bg10
+      width: 16rem
+      left: 15rem
+      top: -8rem
+      mix-blend-mode: hard-light
+    &._bg11
+      width: 100%
+      left: 0
+      bottom: 100%
+      z-index: -1
+    &._bg12
+      width: 120%
+      left: -10%
+      top: 0
+      transform: translateY(-25%)
+      z-index: -1
+      max-width: initial
+    &._bg13
+      width: 15rem
+      right: -5.5rem
+      top: -8.5rem
+    &._bg14
+      width: 100%
+      left: -4rem
+      bottom: 100%
+      z-index: -1
+    &._bg15
+      right: -55%
+      bottom: -30%
+      z-index: -1
+      max-width: 100rem
+.text
+  font-size: 18px
+  letter-spacing: 0.02em
+  &._gray
+    p
+      color: rgba(255, 255, 255, 0.7)
+  ul
+    padding-left: 1em
+  p, ul, ol, table, picture, figure, img, blockquote
+    +margin-updown(2rem)
+    line-height: 1.35
+  h1, h2, h3, h4, h5, h6
+    margin-bottom: 2rem
+    margin-top: 6rem
+    &:first-child
+      margin-top: 0
+  &._bg
+    border-radius: 2.8rem
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.08) 100%)
+    padding: 2.8rem 4rem
+  &._bg2
+    border-radius: 2.8rem
+    background: var(--color6)
+    padding: 5rem 4rem
+
+
+@import "media"

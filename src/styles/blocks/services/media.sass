@@ -1,0 +1,32 @@
++tablet()
+  .service-icon
+    height: 6rem
+    padding: 15px 2rem
+    max-width: calc(33.33% - 15px)
+    &._mini
+      height: 6rem
+      padding: 15px 2rem
+
+  .services
+    gap: 2rem
+    &__line
+      gap: 2rem
+      &._mini
+        gap: 2rem
+
++small-mobile()
+  .service-icon
+    max-width: 100%
+    flex-grow: 1
+    flex-basis: calc(50% - 10px)
+    &._mini
+      flex-basis: calc(50% - 10px)
+    &._active
+      width: 100%
+      flex-basis: 100%
+  .services
+    gap: 15px
+    &__line
+      gap: 15px
+      &._mini
+        gap: 15px

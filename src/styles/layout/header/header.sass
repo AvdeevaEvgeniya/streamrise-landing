@@ -1,0 +1,38 @@
+.header
+  +flex(row nowrap, flex-start, center)
+  padding-top: 2.3rem
+  padding-bottom: 2.3rem
+  background: rgba(255, 255, 255, 0.06)
+  border: 1px solid rgba(255, 255, 255, 0.5)
+  border-top: none
+  border-radius: 0 0 16px 16px
+  position: fixed
+  top: 0
+  gap: 10rem
+  left: 50%
+  transform: translateX(-50%)
+  z-index: 20
+  width: 100%
+  max-width: 1860px
+  &__menu
+    +flex(row nowrap, flex-start, center)
+    flex-grow: 1
+    font-weight: 600
+    font-size: 14px
+    text-transform: uppercase
+    gap: 6rem
+  &__logo
+    font-size: 3rem
+    display: flex
+  &__btns
+    +flex(row nowrap, flex-start, center)
+    gap: 4rem
+    font-size: 3.2rem
+    span
+      align-self: stretch
+      border-right: 1px solid
+  &__toggle,
+  &__menu-btn
+    display: none
+
+@import "media"

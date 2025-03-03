@@ -1,0 +1,21 @@
+.total-row
+  +flex(row nowrap, space-between, center)
+  gap: 2rem
+  font-weight: 500
+  &._main
+    font-weight: 700
+    .total-row
+      &__label
+        font-size: 2rem
+      &__value
+        font-size: 4.5rem
+        color: var(--color1)
+  &__label
+    +flex(row nowrap, flex-start, center)
+    gap: 10px
+  &__value
+    font-weight: 700
+    font-size: 2.4rem
+    text-align: right
+
+@import "media"

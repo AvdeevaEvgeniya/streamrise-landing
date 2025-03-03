@@ -1,0 +1,16 @@
+doctype html
+html.common(lang="ru")
+    head
+        title
+            block title
+        include _head
+        block head
+    body.common__body
+        .app__wrapper
+            .app
+                include _header
+                main.main
+                    block content
+                include _footer
+                include _end
+                block end

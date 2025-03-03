@@ -1,0 +1,35 @@
+.callback
+  &__decor
+    margin-bottom: 4rem
+  &__main
+    display: grid
+    gap: 3.5rem
+    //grid-template-columns: 1fr 1.4fr
+    grid-template-columns: 69rem 1fr
+  &__bg
+    border-radius: 4rem
+    background: linear-gradient(180deg, #401B9F 0%, #4A28A0 100%)
+    position: relative
+    &:after
+      +full()
+      content: ""
+      background: url("../img/pock-3.png") no-repeat
+      border-radius: 4rem
+      z-index: 1
+      mix-blend-mode: luminosity
+    img
+      width: 80%
+      margin: -15rem auto 0 auto
+      position: relative
+      z-index: 2
+  &__form
+    border-radius: 4rem
+    padding: 9rem 4.5rem
+    background: url("../img/pock-1.png"), linear-gradient(78.49deg, #272134 -62.06%, var(--color9) 101.45%) no-repeat center
+    display: grid
+    gap: 5rem
+    align-content: start
+  &__btn
+    margin-left: auto
+
+@import "media"

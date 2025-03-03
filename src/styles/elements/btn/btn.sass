@@ -1,0 +1,31 @@
+.btn
+  +flex(row nowrap, center, center)
+  width: fit-content
+  cursor: pointer
+  border-radius: 12px
+  text-align: center
+  min-height: 7rem
+  padding: 10px 3.5rem
+  background: var(--color1)
+  font-weight: 600
+  text-transform: uppercase
+  letter-spacing: 0.02em
+  transition: all 0.5s
+  min-width: 24rem
+  &._alt
+    background: rgba(255, 255, 255, 0.06)
+    border: 1px solid rgba(255, 255, 255, 0.5)
+  &._full
+    width: 100%
+  &._low
+    min-height: 5rem
+    min-width: 21rem
+
+.btns
+  +flex(row wrap, flex-start, stretch)
+  gap: 2rem 4rem
+  &._j-end
+    justify-content: flex-end
+
+@import "media"
+

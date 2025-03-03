@@ -1,0 +1,44 @@
+.feedback
+  border-radius: var(--radius)
+  background: var(--color2)
+  padding: 3.5rem 4rem
+  display: grid
+  gap: 5.5rem
+  align-content: start
+  grid-auto-rows: auto 1fr auto
+  &__header
+    +flex(row nowrap, space-between, center)
+    gap: 2rem
+  &__name
+    +flex(row nowrap, flex-start, center)
+    gap: 18px
+    span
+      +flex(row nowrap, center, center)
+      border-radius: 8px
+      background: #FF4F38
+      font-size: 2.4rem
+      font-weight: 600
+      width: 4.8rem
+      min-width: 4.8rem
+      height: 4.8rem
+  &__tag
+    +flex(row nowrap, flex-start, center)
+    gap: 10px
+    opacity: 0.55
+    letter-spacing: 0.02em
+    &:before
+      content: ""
+      width: 8px
+      height: 8px
+      min-width: 8px
+      border-radius: 100%
+      display: block
+      background: white
+
+.feedbacks
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 6rem
+  grid-auto-rows: 35rem
+
+@import "media"

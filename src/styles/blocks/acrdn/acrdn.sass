@@ -1,0 +1,21 @@
+.acrdn
+  & > .acrdn__drop
+    display: none
+    transition: all 0.5s
+  &._animation
+    & > .acrdn__header
+      padding-bottom: 4rem
+      &:after
+        transform: rotate(180deg)
+  &._active
+    & > .acrdn__drop
+      display: block
+  &__header
+    +flex(row nowrap, space-between, center)
+    transition: all 0.5s
+    &:after
+      content: "\e905"
+      font-family: "icomoon"
+      font-size: 2rem
+
+@import "media"

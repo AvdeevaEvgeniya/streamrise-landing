@@ -1,0 +1,21 @@
+.description
+  display: grid
+  //grid-template-columns: 1fr 1fr
+  grid-template-columns: 83rem 1fr
+  gap: 5rem
+  align-items: center
+  &._col-1-2
+    //grid-template-columns: 1fr 1.6fr
+    grid-template-columns: 65rem 1fr
+  &._col-2-1
+    grid-template-columns: 1fr 65rem
+  .btn
+    margin-top: 2rem
+  &__main
+    display: grid
+    gap: 4rem
+  &__bg
+    max-width: 80%
+    margin-left: auto
+
+@import "media"

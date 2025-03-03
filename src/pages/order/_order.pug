@@ -1,0 +1,411 @@
+.order
+    .order__block._active
+        .order__main
+            .order__row
+                .order__header
+                    .order__title Накрутка зрителей/Часовые пакеты/Опытный
+                    .order__descr Безлимит на 24 часа | Зрители генерируют просмотры | Авторизованные зрители | Хорошие никнеймы
+                a.btn-icon(href="")
+                    i.icon.icon-trash
+            .order__row
+                .order__info
+                    .info
+                        .info__label Количество:
+                        .info__value 25
+                    .info
+                        .info__label Время:
+                        .info__value 9
+                    .info
+                        .info__label Цена:
+                        .info__value 120₽
+                .order__btns
+                    a.btn._low(href="") НАСТРОЙКИ
+                    a.status(href="")
+                        img(src="img/alert.svg" alt="")
+        .order__drop
+            a.order__link(href="") скрыть
+            .grid._gap-20
+                .h3-alt Ваши данные:
+                .form__cols
+                    .grid._gap-10
+                        .form__label Канал/ID#[span *]
+                        input.input(type="text" placeholder="Введите Канал/ID")
+                    .grid._gap-10
+                        .form__label Интервал#[span *]
+                        .input-num
+                            input.input(type="number" placeholder="0")
+                            .input-num__row._pos
+                                .input-num__unit сек.
+                                .input-num__btns
+                                    a.input-num__btn._plus._max(href="")
+                                    a.input-num__btn._minus(href="")
+            .separate
+            .grid._gap-20
+                .h3-alt Текст для чат бота
+                .form__cols._2-1
+                    .grid._gap-10
+                        .form__label Текст для чат бота#[span *]
+                        textarea.input(placeholder="Введите сюда текст для чат бота")
+                    .grid._gap-10
+                        .dragdrop.input
+                            input(type="file")
+                            a.link-full(href="")
+                            i.icon.icon-upload
+                            .dragdrop__title Перетащите файл или #[a.color(href="") Загрузите]
+                            .dragdrop__descr Формат: pdf, docx, doc & Макс. размер: 25 MB
+            a.btn._low(href="") Потвердить
+            .separate
+            .acrdn._active._animation
+                .acrdn__header
+                    .h3-alt Дополнительные настройки
+                .acrdn__drop
+                    .grid._gap-40
+                        .form__cols
+                            .grid._gap-10
+                                .form__label Дата старта накрутки
+                                .input-wrap
+                                    input.input(type="date" placeholder="ДД/ММ/ГГГГ" onclick="this.showPicker()")
+                                    .input-wrap__icon
+                                        i.icon.icon-calendar
+                            .grid._gap-10
+                                .form__label Страна
+                                .select._active
+                                    .select__main.input
+                                        .select__value
+                                            .select__placeholder Выбрать
+                                            //img.flag(src="img/flag.png" alt="")
+                                            //span Казахстан
+                                        input.select__input(type="text")
+                                    .select__options
+                                        .select__option._choosed(data-value="kz")
+                                            img.flag(src="img/flag.png" alt="")
+                                            span Казахстан
+                                        .select__option(data-value="ru")
+                                            img.flag(src="img/flag.png" alt="")
+                                            span  Россия
+                                        .select__option(data-value="by")
+                                            img.flag(src="img/flag.png" alt="")
+                                            span  Беларусь
+                        .form__cols
+                            .grid._gap-10
+                                .form__label Номер телефона
+                                .input-wrap
+                                    .input-wrap__icon._left
+                                        img.flag(src="img/flag.png" alt="")
+                                    input.input(type="tel" placeholder="+7")
+                        .form__cols
+                            .grid._gap-20
+                                .form__label Способ накрутки
+                                .grid._gap-10
+                                    label.checkbox
+                                        input(type="radio" name="type")
+                                        span.checkbox__mask
+                                        span.checkbox__label Подписчики добавляются постепенно
+                                    label.checkbox
+                                        input(type="radio" name="type")
+                                        span.checkbox__mask
+                                        span.checkbox__label Подписчики приходят мгновенно
+                                    label.checkbox
+                                        input(type="radio" name="type")
+                                        span.checkbox__mask
+                                        span.checkbox__label Накрутка идет с перерывами
+                            .grid._gap-20
+                                .form__label Видимость накрутки
+                                .grid._gap-10
+                                    label.checkbox
+                                        input(type="checkbox")
+                                        span.checkbox__mask
+                                        span.checkbox__label Подписчики прибавляются незаметно
+                                    label.checkbox
+                                        input(type="checkbox")
+                                        span.checkbox__mask
+                                        span.checkbox__label Быстрое увеличение, сразу заметно
+                                    label.checkbox
+                                        input(type="checkbox")
+                                        span.checkbox__mask
+                                        span.checkbox__label Органичный прирост в течение дня
+                        .form__cols
+                            .grid._gap-10
+                                .form__label Длительность подписки
+                                .input-group
+                                    .input-num
+                                        input.input(type="number" placeholder="0")
+                                        .input-num__btns._pos
+                                            a.input-num__btn._plus._max(href="")
+                                            a.input-num__btn._minus(href="")
+                                    .select
+                                        .select__main.input
+                                            .select__value Дней
+                                            input.select__input(type="text")
+                                        .select__options
+                                            .select__option(data-value="minuts") Минут
+                                            .select__option._choosed(data-value="days") Дней
+                                            .select__option(data-value="hours") Часов
+                                            .select__option(data-value="months") Месяцев
+                            .grid._gap-10
+                                .form__label Продолжительность добавл.
+                                .input-group
+                                    .input-num
+                                        input.input(type="number" placeholder="0")
+                                        .input-num__btns._pos
+                                            a.input-num__btn._plus._max(href="")
+                                            a.input-num__btn._minus(href="")
+                                    .select
+                                        .select__main.input
+                                            .select__value Минут
+                                            input.select__input(type="text")
+                                        .select__options
+                                            .select__option._choosed(data-value="minuts") Минут
+                                            .select__option(data-value="days") Дней
+                                            .select__option(data-value="hours") Часов
+                                            .select__option(data-value="months") Месяцев
+                        .alert
+                            img.alert__icon(src="img/alert.svg" alt="")
+                            p Внимание! Убедитесь, что введённый канал или ID указан правильно, без пробелов и специальных символов, иначе услуга не будет активирована. Канал должен быть открытым и доступным для подписок, а также не находиться в режиме приватности. Если вводите ссылку, используйте полный формат, например: https://www.twitch.tv
+                        .form__cols._mob-10
+                            .grid._gap-20
+                                .form__label Улучшенные функции
+                                .grid._gap-10
+                                    label.switch
+                                        input(type="checkbox")
+                                        span.switch__mask
+                                        span.switch__label Ускоренный запуск
+                                    label.switch
+                                        input(type="checkbox")
+                                        span.switch__mask
+                                        span.switch__label Равномерное распределение
+                                    label.switch
+                                        input(type="checkbox")
+                                        span.switch__mask
+                                        span.switch__label Антиспам-защита
+                            .grid._gap-20
+                                .grid._gap-10
+                                    label.switch
+                                        input(type="checkbox")
+                                        span.switch__mask
+                                        span.switch__label Взаимодействие в чате
+                                    label.switch
+                                        input(type="checkbox")
+                                        span.switch__mask
+                                        span.switch__label Фиксированное время работы
+                                    label.switch
+                                        input(type="checkbox")
+                                        span.switch__mask
+                                        span.switch__label Умная накрутка
+            .separate
+            .acrdn._active._animation
+                .acrdn__header
+                    .h3-alt Дополнительную информацию об услуге:
+                .acrdn__drop
+                    .text-3-col
+                        p В стоимость включены просмотры в статистику и на вод(запись стрима), в количестве 10шт за каждого зрителя в час, можно выбрать любое количество уникальных
+                        p После покупки вам будут доступны функции: Плавающие зрители, ставки за баллы канала, участие в голосованиях.
+                        p После покупки вы сможете улучшить заказ на кнопку в строке заказа. Можно увеличить время заказа, количество зрителей и количество рейдов.
+                        p После покупки вам будут доступны функции: Плавающие зрители, ставки за баллы канала, участие в голосованиях. В стоимость включены просмотры в статистику и на вод(запись стрима).
+                        p Отличная накрутка! Мне важно, чтобы всё выглядело естественно, и этот сервис полностью оправдал ожидания. Онлайн зрители приходят плавно, чат не пустует, и благодаря этому даже алгоритмы Twitch стали рекомендовать мой стрим чаще.
+                        p После покупки вам будут доступны функции: Плавающие зрители, ставки за баллы канала, участие в голосованиях.
+    .order__block
+        .order__main
+            .order__row
+                .order__header
+                    .order__title Накрутка зрителей/Часовые пакеты/Опытный
+                    .order__descr Безлимит на 24 часа | Зрители генерируют просмотры | Авторизованные зрители | Хорошие никнеймы
+                a.btn-icon(href="")
+                    i.icon.icon-trash
+            .order__row
+                .order__info
+                    .info
+                        .info__label Количество:
+                        .info__value 25
+                    .info
+                        .info__label Время:
+                        .info__value 9
+                    .info
+                        .info__label Цена:
+                        .info__value 120₽
+                .order__btns
+                    a.btn._low._alt(href="") НАСТРОЙКИ
+                    a.status(href="")
+                        img(src="img/success.svg" alt="")
+        .order__drop
+            a.order__link(href="") скрыть
+            .grid._gap-20
+                .h3-alt Ваши данные:
+                .form__cols
+                    .grid._gap-10
+                        .form__label Канал/ID#[span *]
+                        input.input(type="text" placeholder="Введите Канал/ID")
+                    .grid._gap-10
+                        .form__label Интервал#[span *]
+                        .input-num
+                            input.input(type="number" placeholder="0")
+                            .input-num__row._pos
+                                .input-num__unit сек.
+                                .input-num__btns
+                                    a.input-num__btn._plus._max(href="")
+                                    a.input-num__btn._minus(href="")
+            .separate
+            .grid._gap-20
+                .h3-alt Текст для чат бота
+                .form__cols._2-1
+                    .grid._gap-10
+                        .form__label Текст для чат бота#[span *]
+                        textarea.input(placeholder="Введите сюда текст для чат бота")
+                    .grid._gap-10
+                        .dragdrop.input
+                            input(type="file")
+                            a.link-full(href="")
+                            i.icon.icon-upload
+                            .dragdrop__title Перетащите файл или #[a.color(href="") Загрузите]
+                            .dragdrop__descr Формат: pdf, docx, doc & Макс. размер: 25 MB
+            a.btn._low(href="") Потвердить
+            .separate
+            .acrdn._active._animation
+                .acrdn__header
+                    .h3-alt Дополнительные настройки
+                .acrdn__drop
+                    .grid._gap-40
+                        .form__cols
+                            .grid._gap-10
+                                .form__label Дата старта накрутки
+                                .input-wrap
+                                    input.input(type="date" placeholder="ДД/ММ/ГГГГ" onclick="this.showPicker()")
+                                    .input-wrap__icon
+                                        i.icon.icon-calendar
+                            .grid._gap-10
+                                .form__label Страна
+                                .select._active
+                                    .select__main.input
+                                        .select__value
+                                            .select__placeholder Выбрать
+                                            //img.flag(src="img/flag.png" alt="")
+                                            //span Казахстан
+                                        input.select__input(type="text")
+                                    .select__options
+                                        .select__option._choosed(data-value="kz")
+                                            img.flag(src="img/flag.png" alt="")
+                                            span Казахстан
+                                        .select__option(data-value="ru")
+                                            img.flag(src="img/flag.png" alt="")
+                                            span  Россия
+                                        .select__option(data-value="by")
+                                            img.flag(src="img/flag.png" alt="")
+                                            span  Беларусь
+                        .form__cols
+                            .grid._gap-10
+                                .form__label Номер телефона
+                                .input-wrap
+                                    .input-wrap__icon._left
+                                        img.flag(src="img/flag.png" alt="")
+                                    input.input(type="tel" placeholder="+7")
+                        .form__cols
+                            .grid._gap-20
+                                .form__label Способ накрутки
+                                .grid._gap-10
+                                    label.checkbox
+                                        input(type="radio" name="type")
+                                        span.checkbox__mask
+                                        span.checkbox__label Подписчики добавляются постепенно
+                                    label.checkbox
+                                        input(type="radio" name="type")
+                                        span.checkbox__mask
+                                        span.checkbox__label Подписчики приходят мгновенно
+                                    label.checkbox
+                                        input(type="radio" name="type")
+                                        span.checkbox__mask
+                                        span.checkbox__label Накрутка идет с перерывами
+                            .grid._gap-20
+                                .form__label Видимость накрутки
+                                .grid._gap-10
+                                    label.checkbox
+                                        input(type="checkbox")
+                                        span.checkbox__mask
+                                        span.checkbox__label Подписчики прибавляются незаметно
+                                    label.checkbox
+                                        input(type="checkbox")
+                                        span.checkbox__mask
+                                        span.checkbox__label Быстрое увеличение, сразу заметно
+                                    label.checkbox
+                                        input(type="checkbox")
+                                        span.checkbox__mask
+                                        span.checkbox__label Органичный прирост в течение дня
+                        .form__cols
+                            .grid._gap-10
+                                .form__label Длительность подписки
+                                .input-group
+                                    .input-num
+                                        input.input(type="number" placeholder="0")
+                                        .input-num__btns._pos
+                                            a.input-num__btn._plus._max(href="")
+                                            a.input-num__btn._minus(href="")
+                                    .select
+                                        .select__main.input
+                                            .select__value Дней
+                                            input.select__input(type="text")
+                                        .select__options
+                                            .select__option(data-value="minuts") Минут
+                                            .select__option._choosed(data-value="days") Дней
+                                            .select__option(data-value="hours") Часов
+                                            .select__option(data-value="months") Месяцев
+                            .grid._gap-10
+                                .form__label Продолжительность добавл.
+                                .input-group
+                                    .input-num
+                                        input.input(type="number" placeholder="0")
+                                        .input-num__btns._pos
+                                            a.input-num__btn._plus._max(href="")
+                                            a.input-num__btn._minus(href="")
+                                    .select
+                                        .select__main.input
+                                            .select__value Минут
+                                            input.select__input(type="text")
+                                        .select__options
+                                            .select__option._choosed(data-value="minuts") Минут
+                                            .select__option(data-value="days") Дней
+                                            .select__option(data-value="hours") Часов
+                                            .select__option(data-value="months") Месяцев
+                        .alert
+                            img.alert__icon(src="img/alert.svg" alt="")
+                            p Внимание! Убедитесь, что введённый канал или ID указан правильно, без пробелов и специальных символов, иначе услуга не будет активирована. Канал должен быть открытым и доступным для подписок, а также не находиться в режиме приватности. Если вводите ссылку, используйте полный формат, например: https://www.twitch.tv
+                        .form__cols
+                            .grid._gap-20
+                                .form__label Улучшенные функции
+                                .grid._gap-10
+                                    label.switch
+                                        input(type="checkbox")
+                                        span.switch__mask
+                                        span.switch__label Ускоренный запуск
+                                    label.switch
+                                        input(type="checkbox")
+                                        span.switch__mask
+                                        span.switch__label Равномерное распределение
+                                    label.switch
+                                        input(type="checkbox")
+                                        span.switch__mask
+                                        span.switch__label Антиспам-защита
+                            .grid._gap-20
+                                .grid._gap-10
+                                    label.switch
+                                        input(type="checkbox")
+                                        span.switch__mask
+                                        span.switch__label Взаимодействие в чате
+                                    label.switch
+                                        input(type="checkbox")
+                                        span.switch__mask
+                                        span.switch__label Фиксированное время работы
+                                    label.switch
+                                        input(type="checkbox")
+                                        span.switch__mask
+                                        span.switch__label Умная накрутка
+            .separate
+            .acrdn._active._animation
+                .acrdn__header
+                    .h3-alt Дополнительную информацию об услуге:
+                .acrdn__drop
+                    .text-3-col
+                        p В стоимость включены просмотры в статистику и на вод(запись стрима), в количестве 10шт за каждого зрителя в час, можно выбрать любое количество уникальных
+                        p После покупки вам будут доступны функции: Плавающие зрители, ставки за баллы канала, участие в голосованиях.
+                        p После покупки вы сможете улучшить заказ на кнопку в строке заказа. Можно увеличить время заказа, количество зрителей и количество рейдов.
+                        p После покупки вам будут доступны функции: Плавающие зрители, ставки за баллы канала, участие в голосованиях. В стоимость включены просмотры в статистику и на вод(запись стрима).
+                        p Отличная накрутка! Мне важно, чтобы всё выглядело естественно, и этот сервис полностью оправдал ожидания. Онлайн зрители приходят плавно, чат не пустует, и благодаря этому даже алгоритмы Twitch стали рекомендовать мой стрим чаще.
+                        p После покупки вам будут доступны функции: Плавающие зрители, ставки за баллы канала, участие в голосованиях.

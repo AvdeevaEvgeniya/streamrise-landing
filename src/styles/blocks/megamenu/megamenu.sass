@@ -1,0 +1,152 @@
+.megamenu
+  position: relative
+  text-transform: none
+  &:hover, &._active
+    .megamenu
+      &__drop
+        display: block
+      &__link
+        color: var(--color1)
+  .service-icon
+    &._twitch
+      & ~ .megamenu__sublist
+        .megamenu__title span
+          color: var(--color1)
+        a
+          &:before
+            background: var(--color1)
+          &:hover, &:active
+            background: rgba(160, 72, 255, 0.15)
+            color: var(--color1)
+    &._trovo
+      & ~ .megamenu__sublist
+        .megamenu__title span
+          color: #19d66b
+        a
+          &:before
+            background: #19d66b
+          &:hover, &:active
+            background: rgba(25, 214, 107, 0.15)
+            color: #19d66b
+    &._kick
+      & ~ .megamenu__sublist
+        .megamenu__title span
+          color: var(--color-kick)
+        a
+          &:before
+            background: var(--color-kick)
+          &:hover, &:active
+            background: rgba(83, 252, 24, 0.15)
+            color: var(--color-kick)
+    &._youtube
+      & ~ .megamenu__sublist
+        .megamenu__title span
+          color: #ff0000
+        a
+          &:before
+            background: #ff0000
+          &:hover, &:active
+            background: rgba(255, 0, 0, 0.15)
+            color: #ff0000
+    &._discord
+      & ~ .megamenu__sublist
+        .megamenu__title span
+          color: #5165f6
+        a
+          &:before
+            background: #5165f6
+          &:hover, &:active
+            background: rgba(81, 101, 246, 0.15)
+            color: #5165f6
+    &._dlive
+      & ~ .megamenu__sublist
+        .megamenu__title span
+          color: #ffd300
+        a
+          &:before
+            background: #ffd300
+          &:hover, &:active
+            background: rgba(255, 211, 0, 0.15)
+            color: #ffd300
+  &__link
+    text-transform: uppercase
+  &__drop
+    position: absolute
+    left: 0
+    top: calc(100% + 16px)
+    padding: 3rem 4.5rem
+    border-radius: 12px
+    background: url("../img/bg-6.svg"), linear-gradient(69.81deg, #22153D 6.23%, #1E1928 88.8%), #311E57
+    background-position: right bottom
+    background-repeat: no-repeat
+    min-width: 82rem
+    border: 1px solid rgba(255,255,255,.2)
+    display: none
+    &:after
+      content: ""
+      width: 100%
+      height: 2rem
+      display: block
+      bottom: 100%
+      left: 0
+      position: absolute
+  &__list
+    display: grid
+    gap: 2rem
+    padding-right: 6rem
+    border-right: 1px solid var(--color11)
+    width: 27rem
+  &__sublist
+    position: absolute
+    left: 31.5rem
+    max-width: calc(100% - 31.5rem)
+    top: 3rem
+    gap: 5px
+    font-size: 18px
+    font-weight: 500
+    display: none
+    width: 100%
+    letter-spacing: 0.08em
+    a
+      +flex(row nowrap, flex-start, center)
+      padding: 10px 6rem
+      gap: 10px
+      transition: all 0.5s
+      &:hover
+        font-weight: 700
+      &:before
+        content: ""
+        width: 6px
+        min-width: 6px
+        height: 6px
+        background: white
+        border-radius: 100%
+        display: block
+  &__title
+    padding-left: 6rem
+    margin-bottom: 15px
+    font-size: 2rem
+    font-weight: 700
+    letter-spacing: 0.02em
+    span
+      text-transform: uppercase
+  &__item
+    &._active
+      .service-icon
+        &._twitch
+          box-shadow: 0px 0px 16.2px rgba(160, 72, 255, 0.8)
+        &._trovo
+          box-shadow: 0px 0px 16.2px rgba(25, 214, 107, 0.8)
+        &._kick
+          box-shadow: 0px 0px 16.2px rgba(83, 252, 24, 0.8)
+        &._youtube
+          box-shadow: 0px 0px 16.2px rgba(255, 0, 0, 0.8)
+        &._discord
+          box-shadow: 0px 0px 16.2px rgba(81, 101, 246, 0.8)
+        &._dlive
+          box-shadow: 0px 0px 16.2px rgba(255, 211, 0, 0.8)
+      .megamenu
+        &__sublist
+          display: grid
+
+@import "media"

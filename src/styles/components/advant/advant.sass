@@ -1,0 +1,38 @@
+.advant
+  background: rgba(139, 52, 233, 0.1) no-repeat right bottom
+  background-size: cover
+  border-radius: var(--radius)
+  display: grid
+  gap: 2.4rem
+  padding: 0 4rem 3rem 4rem
+  margin-top: 8.5rem
+  text-align: center
+  justify-items: center
+  align-content: start
+  img
+    width: 23rem
+    margin-top: -8.5rem
+  &._bg-1
+    background-image: url("../img/bg-1.svg")
+  &._bg-2
+    background-image: url("../img/bg-2.svg")
+  &._bg-3
+    background-image: url("../img/bg-3.svg")
+  &._bg-4
+    background-image: url("../img/bg-4.svg")
+
+.advants
+  +grid(28rem, 1fr, 5rem, 2.5rem)
+  justify-content: space-between
+  &._auto
+    grid-template-columns: repeat(auto-fit,minmax(28rem, auto))
+    .advant
+      max-width: 51rem
+  //display: grid
+  //grid-template-columns: repeat(3, 1fr)
+  //gap: 8rem
+  //&._alt
+  //  grid-template-columns: repeat(4, 1fr)
+  //  gap: 2.5rem
+
+@import "media"

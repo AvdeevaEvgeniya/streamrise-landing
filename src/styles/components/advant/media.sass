@@ -1,0 +1,52 @@
++widescreen()
+  .advant
+    padding: 0 3rem 3rem 3rem
+
+  .advants
+    grid-template-columns: repeat(auto-fit,minmax(46rem,1fr))
+
++desktop()
+  .advants
+    &._auto
+      .h3
+        font-size: 2rem
+
++notebook()
+  .advants
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr))
+    &._auto
+      grid-template-columns: initial
+      justify-content: stretch
+      gap: 0
+      .advant
+        &:nth-child(2n)
+          justify-self: end
+
++tablet()
+  .advant
+    p
+      font-size: 16px
+    img
+      width: 17rem
+
+  .advants
+    &._auto
+      gap: 2rem
+
++small-mobile()
+  .advants
+    &._auto
+      .h3
+        font-size: 18px
+
++small-mobile()
+  .advant
+    margin-top: 0
+    padding: 15px 2rem 2rem 2rem
+    img
+      margin-top: 0
+      margin-bottom: -15px
+      width: 13rem
+
+  .advants
+    gap: 2rem

@@ -1,0 +1,35 @@
++widescreen()
+  .footer
+    ._limited
+      max-width: 13rem
+
++tablet()
+  .footer
+    text-align: center
+    padding-top: 5rem
+    ._limited
+      max-width: initial
+    .payments
+      justify-content: center
+      justify-self: stretch
+    &__main
+      display: grid
+      justify-content: stretch
+      gap: 3rem 5rem
+      padding-bottom: 2.5rem
+    &__col
+      gap: 3rem
+      justify-items: center
+    &__title
+      display: none
+
++small-mobile()
+  .footer
+    border-radius: 0
+
++media-hover()
+  .footer
+    a
+      transition: all 0.5s
+      &:hover
+        color: var(--color3)

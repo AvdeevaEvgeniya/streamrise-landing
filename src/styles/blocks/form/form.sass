@@ -1,0 +1,19 @@
+.form
+  display: grid
+  gap: 15px
+  &__item
+    display: grid
+    gap: 10px
+  &__label
+    color: var(--color7)
+    span
+      color: #FF4F38
+  &__cols
+    +grid(28rem, 37rem, 2rem, 7rem)
+    justify-content: start
+    align-items: end
+    &._2-1
+      grid-template-columns: 1.5fr 1fr
+      gap: 2rem 4rem
+
+@import "media"

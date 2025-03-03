@@ -1,0 +1,29 @@
++widescreen()
+  .feedbacks
+    gap: 2.5rem
+
++notebook()
+  .feedbacks
+    grid-template-columns: initial
+    grid-auto-rows: initial
+
++tablet()
+  .feedback
+    gap: 3rem
+
++mobile()
+  .feedback
+    padding: 3rem
+
++small-mobile()
+  .feedback
+    padding: 2rem
+    gap: 2rem
+    &__rating
+      max-width: 10rem
+    &__name
+      span
+        width: 4rem
+        min-width: 4rem
+        height: 4rem
+        font-size: 2rem

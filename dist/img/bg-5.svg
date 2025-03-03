@@ -1,0 +1,36 @@
+<svg width="462" height="278" viewBox="0 0 462 278" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_8185_7919)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M636.674 400.656C587.336 393.66 526.227 409.438 478.64 433.516C427.999 459.141 372.981 497.208 368.476 536.366C363.748 577.455 440.856 590.004 456.403 626.78C469.866 658.629 414.642 711.197 450.751 730.995C487.986 751.41 555.247 719.918 608.834 710.355C644.403 704.007 677.171 687.758 712.664 684.254C764.508 679.137 813.03 704.648 861.942 685.371C908.557 667 942.833 626.036 946.297 592.177C949.797 557.956 874.658 547.753 879.535 513.402C887.382 458.136 1047.42 372.954 980.247 353.072C902.273 329.993 823.617 456.219 730.097 469.171C677.865 476.405 684.598 407.451 636.674 400.656Z" fill="#4B15E4"/>
+</g>
+<g filter="url(#filter1_f_8185_7919)">
+<path d="M690.646 329.146C690.646 329.146 501.809 435.81 371.829 470.638C241.85 505.466 24.9798 507.511 24.9798 507.511L76.8399 701.056C76.8399 701.056 293.71 699.011 423.689 664.183C553.669 629.355 742.507 522.691 742.507 522.691L690.646 329.146Z" fill="#ACA5FF"/>
+</g>
+<g filter="url(#filter2_f_8185_7919)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M529.138 522.393C540.825 553.916 582.672 575.035 628.465 582.832C677.198 591.129 741.596 592.643 787.23 566.336C835.115 538.732 818.66 488.281 853.693 452.993C884.033 422.434 964.752 413.424 972.636 379.588C980.766 344.698 918.887 331.813 886.975 310.161C865.793 295.789 834.631 290.178 816.664 273.761C790.421 249.781 799.791 205.116 758.851 193.088C719.834 181.625 660.399 193.331 621.111 216.31C581.403 239.534 599.706 287.211 559.308 309.794C494.313 346.127 335.599 322.987 339.912 373.501C344.918 432.138 517.395 381.643 568.902 422.171C597.669 444.807 517.786 491.773 529.138 522.393Z" fill="#898AA4"/>
+</g>
+<g filter="url(#filter3_f_8185_7919)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M291.411 454.989C268.354 478.954 269.259 511.931 284.181 539.199C300.06 568.218 329.64 601.123 375.508 608.674C423.638 616.597 461.621 579.36 510.561 576.467C552.945 573.961 599.944 608.924 634.513 593.362C670.159 577.315 652.133 539.115 656.489 510.773C659.38 491.961 649.503 473.229 655.8 454.838C664.998 427.976 710.133 406.917 701.393 379.626C693.064 353.617 653.844 330.794 614.055 324.483C573.84 318.104 539.269 354.664 499.306 347.573C435.011 336.165 379.764 243.892 335.886 275.126C284.954 311.381 413.8 368.098 401.694 417.056C394.932 444.4 313.807 431.71 291.411 454.989Z" fill="#898AA4"/>
+</g>
+<defs>
+<filter id="filter0_f_8185_7919" x="-41.6478" y="-59.6542" width="1448.24" height="1207.32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="204.957" result="effect1_foregroundBlur_8185_7919"/>
+</filter>
+<filter id="filter1_f_8185_7919" x="-96.4765" y="207.69" width="960.439" height="614.822" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="60.7281" result="effect1_foregroundBlur_8185_7919"/>
+</filter>
+<filter id="filter2_f_8185_7919" x="-70.0893" y="-221.28" width="1453.37" height="1219.39" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="204.957" result="effect1_foregroundBlur_8185_7919"/>
+</filter>
+<filter id="filter3_f_8185_7919" x="-136.461" y="-141.21" width="1248.89" height="1160.9" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="204.957" result="effect1_foregroundBlur_8185_7919"/>
+</filter>
+</defs>
+</svg>

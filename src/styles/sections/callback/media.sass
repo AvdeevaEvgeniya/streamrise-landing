@@ -1,0 +1,48 @@
++widescreen()
+  .callback
+    &__main
+      grid-template-columns: 1fr 1fr
+
++notebook()
+  .callback
+    &__main
+      grid-template-columns: 1fr 2fr
+    &__bg
+      display: grid
+      align-content: end
+      img
+        margin: 0
+        width: 100%
+
++tablet()
+  .callback
+    &__main
+      grid-template-columns: initial
+      position: relative
+    &__bg
+      background: none
+      &:after
+        content: none
+      img
+        width: 30%
+        position: absolute
+        pointer-events: none
+        right: 0
+        top: 0
+        transform: translateY(-50%)
+    &__form
+      padding: 5rem var(--offset)
+    &__decor
+      margin-bottom: 0
+
++small-mobile()
+  .callback
+    padding: 0
+    &__form
+      gap: 3rem
+      border-radius: 0
+    &__bg
+      img
+        transform: translateY(-20%)
+    &__btn
+      width: 100%

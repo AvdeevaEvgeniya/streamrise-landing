@@ -1,0 +1,30 @@
++tablet()
+  .btn
+    min-height: 6rem
+
+  .btns
+    gap: 2rem
+
++mobile()
+  .btn
+    &._low
+      min-height: 4rem
+      min-width: initial
+      padding: 10px 2rem
+
++small-mobile()
+  .btn
+    width: 100%
+    min-width: initial
+    &._mob-fit
+      width: fit-content
+
++media-hover()
+  .btn
+    transition: all 0.5s
+    &:hover
+      filter: brightness(1.1)
+    &._alt
+      background: rgba(255, 255, 255, 0.06)
+      &:hover
+        background: rgba(255, 255, 255, 0.2)

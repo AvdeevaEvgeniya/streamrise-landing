@@ -1,0 +1,92 @@
++widescreen()
+  .main-screen
+    min-height: initial
+
++desktop()
+  .main-screen
+    &__img
+      max-width: 55%
+
++notebook()
+  .main-screen
+    padding-top: 20rem
+    &__header
+      font-size: 3rem
+    &__bg
+      top: initial
+      bottom: -15%
+    &__text
+      width: 65%
+
++tablet()
+  .main-screen
+    padding-top: 15rem
+    padding-bottom: 0
+    display: grid
+    gap: 5rem
+    & > .btns
+      position: static
+    &__header
+      font-size: 2.5rem
+      img
+        max-height: 4.5rem
+    &__content
+      gap: 5rem
+    &__text
+      font-size: 18px
+    &__name
+      position: static
+      img
+        max-height: 8rem
+
++mobile()
+  .main-screen
+    padding-top: 12rem
+    overflow: hidden
+    gap: 0
+    &._mob-radius
+      border-radius: 0 0 4rem 4rem
+    .mini-advants
+      margin-top: 0
+      display: none
+    .btns
+      justify-content: center
+      width: 100%
+    & > .btns
+      position: absolute
+      width: 100%
+      left: 0
+      padding: 0 var(--offset)
+      flex-wrap: nowrap
+    &__header
+      font-size: 2rem
+      text-align: center
+    &__content
+      gap: 4rem
+    &__img
+      position: static
+      max-height: initial
+      max-width: 100%
+    &__bg
+      left: 0
+      max-width: 135%
+    &__advants
+      display: block
+      padding-top: 3rem
+      padding-bottom: 3rem
+      .mini-advant
+        background: var(--color4)
+        padding: 10px
+        border-radius: 12px
+    &__text
+      width: 100%
+    &__name
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+
++small-mobile()
+  .main-screen
+    &__header
+      font-size: 18px
+

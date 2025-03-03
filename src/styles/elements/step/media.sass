@@ -1,0 +1,24 @@
++desktop()
+  .step
+    padding: 0
+
+  .steps
+    gap: 3rem
+
++notebook()
+  .steps
+    gap: 2rem
+
++tablet()
+  .step
+    &__bg
+      max-height: 100%
+    &__num
+      &:after,
+      &:before
+        content: none
+
+  .steps
+    grid-template-columns: initial
+    padding: 0
+    gap: 4rem

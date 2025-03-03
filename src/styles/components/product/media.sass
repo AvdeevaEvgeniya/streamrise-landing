@@ -1,0 +1,30 @@
++widescreen()
+  .product-slider
+    .swiper-button-prev
+      left: 5px
+    .swiper-button-next
+      right: 5px
+
++tablet()
+  .product-slider
+    .swiper-button-prev,
+    .swiper-button-next
+      display: none
+    .swiper-pagination
+      display: block
+      position: static
+      margin-top: 2rem
+
++mobile()
+  .product-slider
+    padding-left: 0
+    padding-right: 0
+    .swiper
+      padding: 0 var(--offset)
+
++small-mobile()
+  .product
+    padding: 2rem
+    &__title
+      font-size: 3rem
+      width: 100%

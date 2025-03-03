@@ -1,0 +1,94 @@
++desktop()
+  .header
+    gap: 5rem
+    &__menu
+      gap: 5rem
+
++notebook()
+  .header
+    gap: 3rem
+    &__menu
+      gap: 3rem
+    &__btns
+      gap: 3rem
+
++tablet()
+  .header
+    justify-content: space-between
+    padding-top: 15px
+    padding-bottom: 15px
+    &__menu
+      position: absolute
+      top: 100%
+      left: 0
+      width: 100%
+      padding: 2rem var(--offset)
+      justify-content: space-between
+      opacity: 0
+      pointer-events: none
+      transform: translateY(-100%)
+      transition: all 0.5s
+      overflow-y: auto
+      max-height: calc(100vh - 6rem)
+      max-height: calc(100dvh - 6rem)
+    &__menu-btn
+      +flex(row nowrap, center, center)
+      font-size: 3rem
+      .icon-close
+        display: none
+    &__btns
+      font-size: 2.5rem
+    &__toggle
+      &:checked
+        & ~ .header
+          .header
+            &__menu
+              opacity: 1
+              pointer-events: auto
+              transform: translateY(0)
+            &__menu-btn
+              .icon-close
+                display: inline-flex
+              .icon-menu
+                display: none
+
++mobile()
+  .header
+    transition: all 0.5s
+    &__menu
+      display: grid
+      text-align: center
+      justify-content: center
+      justify-items: center
+      background: rgba(39, 26, 63, 0.9)
+      border-radius: 0 0 16px 16px
+      border-bottom: 1px solid rgba(255, 255, 255, .5)
+    &__toggle
+      &:checked
+        & ~ .header
+          background: rgba(39, 26, 63, 0.9)
+          border-radius: 0
+          border: none
+
++small-mobile()
+  .header
+    &__btns
+      gap: 2rem
+      transition: all 0.5s
+      opacity: 0
+      pointer-events: none
+    &__toggle
+      &:checked
+        & ~ .header
+          .header
+            &__btns
+              opacity: 1
+              pointer-events: auto
+
++media-hover()
+  .header
+    &__menu
+      & > a
+        transition: all 0.5s
+        &:hover
+          color: var(--color3)

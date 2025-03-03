@@ -1,0 +1,113 @@
+.irs
+  position: relative
+  display: block
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  height: 8rem
+.irs-line
+  position: relative
+  display: block
+  overflow: hidden
+  outline: 0!important
+  top: 3.8rem
+  height: 6px
+  cursor: pointer
+  width: 100%
+  background: #E1E4E9
+  border-radius: 2rem
+.irs-bar
+  position: absolute
+  display: block
+  left: 0
+  width: 0
+  top: 3.8rem
+  height: 6px
+  background: var(--color1)
+  cursor: pointer
+  border-radius: 2rem
+.irs-handle
+  position: absolute
+  display: block
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  z-index: 1
+  top: 3rem
+  width: 2.2rem
+  height: 2.2rem
+  border-radius: 100%
+  cursor: pointer
+  background: var(--color1)
+.irs-hidden-input
+  position: absolute!important
+  display: block!important
+  top: 0!important
+  left: 0!important
+  width: 0!important
+  height: 0!important
+  font-size: 0!important
+  line-height: 0!important
+  padding: 0!important
+  margin: 0!important
+  overflow: hidden
+  outline: 0!important
+  z-index: -9999!important
+  background: 0 0!important
+  border-style: solid!important
+  border-color: transparent!important
+.irs-bar--single
+  border-radius: 4rem
+.irs-max, .irs-min, .irs-from, .irs-single, .irs-to
+  position: absolute
+  top: 0
+  visibility: visible
+  font-size: 12px
+  border-radius: 5px
+  background: white
+  color: var(--color1)
+  padding: 5px
+  min-width: 2rem
+  text-align: center
+  font-weight: 500
+  display: block
+.irs-max, .irs-min
+  visibility: visible!important
+.irs-min
+  left: 0
+.irs-max
+  right: 0
+.irs-grid
+  display: block
+  position: relative
+.irs-grid-pol
+  position: absolute
+  bottom: 2rem
+  left: 0
+  width: 1px
+  height: 10px
+  height: 5px
+  background: white
+  &.small
+    height: 5px
+    display: none
+.irs-grid-text
+  position: absolute
+  bottom: 0
+  left: 0
+  font-size: 12px
+  display: none
+  &:after
+    content: ""
+    width: 1px
+    height: 10px
+    background: white
+    position: absolute
+    top: -11px
+    left: 49%
+  &.js-grid-text-0,
+  &.js-grid-text-5,
+  &.js-grid-text-11,
+  &.js-grid-text-17
+    display: block

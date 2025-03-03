@@ -1,0 +1,26 @@
+extends ../layout/layout
+block title
+    | index
+block head
+block content
+    .index
+        include _main-screen
+        .block-bg._bg1.inner.mb-20.decor
+            img.decor__img._bg1.rellax(src="img/fig-3.png" alt="" data-rellax-speed="5" data-rellax-percentage="0.5")
+            img.decor__img._bg6.rellax(src="img/circle-bg.svg" alt="" data-rellax-speed="5" data-rellax-percentage="0.5")
+            include _advants
+            include _video
+        include _services
+        include _products
+        include _about
+        include _advants2
+        include _description
+        include _form
+        .block-bg._bg2.inner.mb-20.decor
+            img.decor__img._bg3.rellax(src="img/fig-8.png" alt="" data-rellax-speed="5" data-rellax-percentage="0.5")
+            img.decor__img._bg8(src="img/circle-bg.svg" alt="")
+            include _warranties
+            include _feedback
+        include _description2
+block end
+

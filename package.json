@@ -1,0 +1,48 @@
+{
+  "name": "Project",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "browser-sync": "^3.0.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^3.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-image": "^6.3.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^5.0.0"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "bowser": "^2.11.0",
+    "default": "^0.1.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^6.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-tinypng": "^1.0.2",
+    "jquery-pjax": "^2.0.1",
+    "lp": "0.0.2",
+    "npm": "^11.1.0",
+    "sass": "^1.84.0",
+    "swiper": "^11.2.2",
+    "tinify": "^1.7.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "Project",
+  "description": "Для сборки ппроекта и работы с исходниками:\r 1. устанавливаем модули npm i\r 2. в галп тасках команда default собирает проект"
+}

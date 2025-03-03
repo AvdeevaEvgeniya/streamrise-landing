@@ -1,0 +1,17 @@
+.tab
+  font-size: 2.6rem
+  font-weight: 500
+  padding: 0 8rem
+  text-decoration: underline
+  border-right: 2px solid rgba(255, 255, 255, 0.4)
+  white-space: nowrap
+  &:last-child
+    border-right: none
+  &._active
+    color: var(--color1)
+    font-weight: 700
+
+.tabs
+  +flex(row nowrap, center, center)
+
+@import "media"

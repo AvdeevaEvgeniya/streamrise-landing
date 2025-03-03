@@ -1,0 +1,43 @@
+aside.sidebar.decor.block-bg
+    img.decor__img._bg15(src="img/circle-bg.svg" alt="")
+    .sidebar__block
+        .h3-alt Способ оплаты:
+        label.checkbox
+            input(type="radio" name="payment")
+            span.checkbox__mask
+            span.checkbox__label
+                b Robokassa
+                small Банковские карты РФ + Зарубежные
+                span.label._border Комиссия 5%
+        label.checkbox
+            input(type="radio" name="payment")
+            span.checkbox__mask
+            span.checkbox__label
+                b ЮKassa
+                small Банковские карты, электронные деньги и другое
+                span.label Скидка 3%
+        label.checkbox
+            input(type="radio" name="payment")
+            span.checkbox__mask
+            span.checkbox__label
+                b Cryptomus
+                small Cryptocurrencies
+                span.label Комиссия 5%
+    .sidebar__block
+        .h3-alt Ваши данные:
+        input.input._high(type="email" placeholder="Введите вашу почту")
+    .sidebar__block
+        .h3-alt Итого:
+        .total-row
+            .total-row__label Персональная скидка
+                .label -3%
+            .total-row__value -250₽
+        .total-row
+            .total-row__label Недельная акция
+                .label -5%
+            .total-row__value -370₽
+        .total-row._main
+            .total-row__label Общая сумма
+            .total-row__value 5.800₽
+        a.btn._full(href="") ОПЛАТИТЬ
+
