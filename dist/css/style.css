@@ -2060,15 +2060,6 @@ img {
   background-clip: text;
   text-fill-color: transparent
 }
-.app .color {
-  color: var(--color1)
-}
-.app .color2 {
-  color: var(--color3)
-}
-.app .color3 {
-  color: var(--color-kick)
-}
 .app .unnderline {
   border-bottom: 1px solid
 }
