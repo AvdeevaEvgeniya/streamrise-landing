@@ -107,6 +107,18 @@
     display: none
     width: 100%
     letter-spacing: 0.08em
+    max-height: calc(100% - 6rem)
+    overflow-y: auto
+    &::-webkit-scrollbar-track
+      background: var(--color3)
+      border-radius: 2rem
+    &::-webkit-scrollbar
+      width: 10px
+      height: auto
+    &::-webkit-scrollbar-thumb
+      background: black
+      border-radius: 2rem
+      border: 2px solid var(--color3)
     a
       +flex(row nowrap, flex-start, center)
       padding: 10px 6rem
