@@ -3317,7 +3317,8 @@ img {
   width: 100%;
   letter-spacing: .08em;
   max-height: calc(100% - 6rem);
-  overflow-y: auto
+  overflow-y: auto;
+  overflow-x: hidden
 }
 .app .megamenu__sublist::-webkit-scrollbar-track {
   background: var(--color3);
@@ -3408,7 +3409,9 @@ img {
     max-width: 100%;
     padding-top: 3rem;
     padding-bottom: 10px;
-    gap: 0
+    gap: 0;
+    max-height: initial;
+    overflow: initial
   }
   .app .megamenu__sublist a {
     padding: 10px 2.5rem;
