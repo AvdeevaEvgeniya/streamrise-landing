@@ -49,12 +49,12 @@ p
   font-weight: 700
   letter-spacing: 0.02em
 
-.h4, .text h4
+.h4
   font-size: 3.2rem
   letter-spacing: 1px
   font-family: "square721"
 
-.h5, .text h5
+.h5, .text h4
   font-size: 2.6rem
   letter-spacing: 0.02em
   font-weight: 600
@@ -263,17 +263,40 @@ p
 .text
   font-size: 18px
   letter-spacing: 0.02em
+  &._limit-w
+    max-width: 130rem
+    margin: 0 auto
+    width: 100%
+  &._simple
+    line-height: 1.6
+    font-size: 2rem
+    p, ul, ol, table, picture, figure, img, blockquote
+      line-height: inherit
+    p
+      font-size: inherit
+    ol, ul
+      display: grid
+      gap: 6px
+    li::marker
+      color: var(--color3)
   &._gray
     p
       color: rgba(255, 255, 255, 0.7)
+  .btn
+    +margin-updown(6rem)
   ul
     padding-left: 1em
   p, ul, ol, table, picture, figure, img, blockquote
     +margin-updown(2rem)
     line-height: 1.35
-  h1, h2, h3, h4, h5, h6
+  h1, h2, h3
     margin-bottom: 2rem
     margin-top: 6rem
+    &:first-child
+      margin-top: 0
+  h4, h5, h6
+    margin-bottom: 2rem
+    margin-top: 3rem
     &:first-child
       margin-top: 0
   &._bg
