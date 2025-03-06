@@ -1,11 +1,38 @@
 +tablet()
   .service-tab
     height: 5rem
-    padding: 15px 5rem
-    min-width: initial
+    padding: 10px
+    border-radius: 10px 10px 0 0
+    &._active
+      padding: 5px 2rem
+
+  .service-tabs
+    gap: 2rem
+    &__btn
+      a
+        font-size: 12px
+        padding: 10px 2rem
+
++mobile()
+  .service-tab
+    &._no-mobile
+      display: none
+
+  .service-tabs
+    &__btn
+      position: absolute
+      top: 100%
+      left: 0
+      padding: 2rem var(--offset) 0 var(--offset)
+      width: 100%
+      background: #190c33
+      border-radius: 2.5rem 2.5rem 0 0
+      a
+        min-height: 6rem
+        border: 1px solid rgba(255, 255, 255, 0.5)
+        border-radius: 12px
+        width: 100%
 
 +small-mobile()
-  .service-tab
-    height: 5rem
-    padding: 15px 2rem
-    flex-grow: 1
+  .service-tabs
+    gap: 15px

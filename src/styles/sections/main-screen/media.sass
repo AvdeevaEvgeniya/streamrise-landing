@@ -24,8 +24,10 @@
     padding-bottom: 0
     display: grid
     gap: 5rem
-    & > .btns
+    .service-tabs
       position: static
+      padding: 0
+      min-width: 0
     &__header
       font-size: 2.5rem
       img
@@ -42,22 +44,27 @@
 +mobile()
   .main-screen
     padding-top: 12rem
-    overflow: hidden
     gap: 0
     &._mob-radius
       border-radius: 0 0 4rem 4rem
+    &._with-services
+      margin-bottom: 6rem
+      background: url("../img/circle-bg.svg") no-repeat bottom 100% center
+      position: relative
+      z-index: 1
+      padding-bottom: 2.5rem
     .mini-advants
       margin-top: 0
       display: none
     .btns
       justify-content: center
       width: 100%
-    & > .btns
+    .service-tabs
       position: absolute
       width: 100%
       left: 0
       padding: 0 var(--offset)
-      flex-wrap: nowrap
+      bottom: 2.5rem
     &__header
       font-size: 2rem
       text-align: center

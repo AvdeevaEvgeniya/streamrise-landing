@@ -1,4 +1,4 @@
-section.main-screen.inner._mob-radius
+section.main-screen.inner._with-services
     .main-screen__content
         .main-screen__header
             .subtitle Привлечение и накрутка зрителей
@@ -19,12 +19,25 @@ section.main-screen.inner._mob-radius
             .mini-advant
                 img(src="img/icon-4.png" alt="")
                 span Стабильные зрители на ваших стримах
-    .btns
-        .service-tab._twitch
-            img(src="img/twitch.svg" alt="")
-        .service-tab._kick
-            img(src="img/kick.png" alt="")
-    img.main-screen__bg(src="img/main-scr-bg.svg" alt="")
+    .service-tabs
+        a.service-tab.twitch-bg-fill._active(href="")
+            img._big(src="img/twitch.svg" alt="")
+            img._mini(src="img/twitch_mini.svg" alt="")
+        a.service-tab.kick-bg-fill(href="")
+            img._big(src="img/kick.png" alt="")
+            img._mini(src="img/kick_mini.png" alt="")
+        a.service-tab(href="")
+            img._big(src="img/trovo.png" alt="")
+            img._mini(src="img/trovo_mini.png" alt="")
+        a.service-tab.discord-bg-fill(href="")
+            img._big(src="img/discord.png" alt="")
+            img._mini(src="img/discord_mini.png" alt="")
+        a.service-tab.dlive-bg-fill._no-mobile(href="")
+            img._big(src="img/dlive.svg" alt="")
+            img._mini(src="img/dlive_mini.svg" alt="")
+        .service-tabs__btn
+            a.popupActivation(href="" data-popup="services") смотерть все СЕРВИСЫ
+    img.main-screen__bg(src="img/main-scr-bg.png" alt="")
     img.main-screen__img(src="img/banner-1.png" alt="")
 .main-screen__advants.inner
     .mini-advants.square721

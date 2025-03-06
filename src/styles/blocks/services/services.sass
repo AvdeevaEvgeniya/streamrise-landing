@@ -6,6 +6,12 @@
     gap: 5rem 9rem
     &._mini
       gap: 5rem 6rem
+  &__grid
+    +grid2(18rem, 1fr, 4rem, 4rem)
+    .service-icon
+      flex-basis: initial
+      max-width: initial
+      padding: 10px 3rem
 
 .service-icon
   +flex(row nowrap, center, center)

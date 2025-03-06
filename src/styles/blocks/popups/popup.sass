@@ -1,0 +1,43 @@
+.popup
+  +flex(row wrap, center, center)
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: none
+  z-index: 1000
+  .input
+    border-color: var(--color7)
+  &.active
+    display: flex
+  &__close
+    +flex(row wrap, center, center)
+    position: absolute
+    cursor: pointer
+    top: 0
+    right: 0
+    z-index: 15
+    font-size: 2rem
+  &__content
+    width: 100%
+    position: relative
+    z-index: 1
+    margin: auto
+    &._bg
+      max-width: 100rem
+      border-radius: 12px
+      padding: 6rem 10rem
+      border: 1px solid rgba(255,255,255,.2)
+  &__scroll
+    +full()
+    +flex(row wrap, center, flex-start)
+    overflow: auto
+    overflow-x: hidden
+    position: relative
+    background: rgba(36, 31, 46, 0.7)
+    padding: 3rem
+  &__title
+    text-align: center
+
+@import "media"

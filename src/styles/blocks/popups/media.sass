@@ -1,0 +1,21 @@
++notebook()
+  .popup
+    &__content
+      min-width: 28rem
+      &._bg
+        padding: 3rem var(--offset)
+    &__scroll
+      padding: 5rem var(--offset)
+
++mobile()
+  .popup
+    &__scroll
+      padding: 0
+    &__content
+      +flex(column nowrap, center, stretch)
+      width: 100%
+      min-height: 100%
+      overflow-y: auto
+      &._bg
+        width: 100%
+        border-radius: 0

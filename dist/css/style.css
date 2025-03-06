@@ -800,7 +800,7 @@ button.swiper-pagination-bullet {
 .common__body {
   font-family: Inter,sans-serif;
   margin: 0;
-  font-size: 16px;
+  font-size: 2rem;
   color: #fff;
   position: relative;
   background: linear-gradient(180deg,#190c33 0,#241641 100%)
@@ -1042,6 +1042,11 @@ img {
     zoom: .7
   }
 }
+@media (max-width:1500px) {
+  .common__body {
+    font-size: 16px
+  }
+}
 .app .btn {
   display: flex;
   flex-flow: row nowrap;
@@ -1172,33 +1177,99 @@ img {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   border-radius: 16px 16px 0 0;
-  min-width: 31rem;
   height: 7.5rem;
-  padding: 2rem
+  background: #fff;
+  width: 9.5rem;
+  padding: 15px
+}
+.app .service-tab._active {
+  padding: 15px 3.5rem;
+  width: auto
+}
+.app .service-tab._active ._big {
+  display: block
+}
+.app .service-tab._active ._mini {
+  display: none
 }
 .app .service-tab img {
   max-height: 100%
 }
-.app .service-tab._twitch {
-  background: var(--bg-twitch)
+.app .service-tab ._big {
+  display: none
 }
-.app .service-tab._kick {
-  background: var(--bg-kick)
+.app .service-tabs {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 3rem
+}
+.app .service-tabs__btn {
+  align-self: stretch
+}
+.app .service-tabs__btn a {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all .5s;
+  min-width: 15rem;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 12px 12px 0 0;
+  border-bottom: none
 }
 @media (max-width:1023px) {
   .app .service-tab {
     height: 5rem;
-    padding: 15px 5rem;
-    min-width: initial
+    padding: 10px;
+    border-radius: 10px 10px 0 0
+  }
+  .app .service-tab._active {
+    padding: 5px 2rem
+  }
+  .app .service-tabs {
+    gap: 2rem
+  }
+  .app .service-tabs__btn a {
+    font-size: 12px;
+    padding: 10px 2rem
+  }
+}
+@media (max-width:767px) {
+  .app .service-tab._no-mobile {
+    display: none
+  }
+  .app .service-tabs__btn {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 2rem var(--offset) 0 var(--offset);
+    width: 100%;
+    background: #190c33;
+    border-radius: 2.5rem 2.5rem 0 0
+  }
+  .app .service-tabs__btn a {
+    min-height: 6rem;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 12px;
+    width: 100%
   }
 }
 @media (max-width:530px) {
-  .app .service-tab {
-    height: 5rem;
-    padding: 15px 2rem;
-    flex-grow: 1
+  .app .service-tabs {
+    gap: 15px
   }
 }
 .app .tab {
@@ -1966,6 +2037,9 @@ img {
 .app .gray {
   color: rgba(255,255,255,.7)
 }
+.app .relative {
+  position: relative
+}
 .app .square721 {
   font-family: square721;
   text-transform: uppercase
@@ -2098,6 +2172,10 @@ img {
 .app .block-bg._bg3 {
   background-image: url(../img/fig-7.png),linear-gradient(69.81deg,var(--color9) 6.23%,var(--color8) 88.8%);
   background-position: right top
+}
+.app .block-bg._bg4 {
+  background-image: url(../img/fig-13.png),linear-gradient(69.81deg,var(--color9) 6.23%,var(--color8) 88.8%);
+  background-position: bottom right
 }
 .app .block-bg2 {
   border-radius: 4rem;
@@ -2524,7 +2602,7 @@ img {
   border-radius: var(--radius);
   display: grid;
   gap: 2.4rem;
-  padding: 0 4rem 3rem 4rem;
+  padding: 0 2rem 3rem 2rem;
   margin-top: 8.5rem;
   text-align: center;
   justify-items: center;
@@ -2963,6 +3041,16 @@ img {
 .app .services__line._mini {
   gap: 5rem 6rem
 }
+.app .services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(18rem,1fr));
+  grid-gap: 4rem 4rem
+}
+.app .services__grid .service-icon {
+  flex-basis: initial;
+  max-width: initial;
+  padding: 10px 3rem
+}
 .app .service-icon {
   display: flex;
   flex-flow: row nowrap;
@@ -3026,6 +3114,9 @@ img {
   .app .services__line._mini {
     gap: 2rem
   }
+  .app .services__grid {
+    gap: 2rem
+  }
 }
 @media (max-width:530px) {
   .app .service-icon {
@@ -3048,6 +3139,9 @@ img {
   }
   .app .services__line._mini {
     gap: 15px
+  }
+  .app .services__grid {
+    grid-template-columns: repeat(auto-fill,minmax(15rem,1fr))
   }
 }
 .app .form {
@@ -3471,16 +3565,109 @@ img {
     text-align: left
   }
 }
+.app .popup {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1000
+}
+.app .popup .input {
+  border-color: var(--color7)
+}
+.app .popup.active {
+  display: flex
+}
+.app .popup__close {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  z-index: 15;
+  font-size: 2rem
+}
+.app .popup__content {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin: auto
+}
+.app .popup__content._bg {
+  max-width: 100rem;
+  border-radius: 12px;
+  padding: 6rem 10rem;
+  border: 1px solid rgba(255,255,255,.2)
+}
+.app .popup__scroll {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: auto;
+  overflow-x: hidden;
+  position: relative;
+  background: rgba(36,31,46,.7);
+  padding: 3rem
+}
+.app .popup__title {
+  text-align: center
+}
+@media (max-width:1200px) {
+  .app .popup__content {
+    min-width: 28rem
+  }
+  .app .popup__content._bg {
+    padding: 3rem var(--offset)
+  }
+  .app .popup__scroll {
+    padding: 5rem var(--offset)
+  }
+}
+@media (max-width:767px) {
+  .app .popup__scroll {
+    padding: 0
+  }
+  .app .popup__content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    min-height: 100%;
+    overflow-y: auto
+  }
+  .app .popup__content._bg {
+    width: 100%;
+    border-radius: 0
+  }
+}
 .app .main-screen {
   padding-top: 25rem;
   padding-bottom: 25rem;
   position: relative;
   min-height: 90rem
 }
-.app .main-screen > .btns {
+.app .main-screen .service-tabs {
   position: absolute;
-  left: var(--offset);
-  bottom: 0
+  left: 0;
+  bottom: 0;
+  padding: 0 var(--offset)
 }
 .app .main-screen .mini-advants {
   margin-top: 15px
@@ -3564,8 +3751,10 @@ img {
     display: grid;
     gap: 5rem
   }
-  .app .main-screen > .btns {
-    position: static
+  .app .main-screen .service-tabs {
+    position: static;
+    padding: 0;
+    min-width: 0
   }
   .app .main-screen__header {
     font-size: 2.5rem
@@ -3589,11 +3778,17 @@ img {
 @media (max-width:767px) {
   .app .main-screen {
     padding-top: 12rem;
-    overflow: hidden;
     gap: 0
   }
   .app .main-screen._mob-radius {
     border-radius: 0 0 4rem 4rem
+  }
+  .app .main-screen._with-services {
+    margin-bottom: 6rem;
+    background: url(../img/circle-bg.svg) no-repeat bottom 100% center;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 2.5rem
   }
   .app .main-screen .mini-advants {
     margin-top: 0;
@@ -3603,12 +3798,12 @@ img {
     justify-content: center;
     width: 100%
   }
-  .app .main-screen > .btns {
+  .app .main-screen .service-tabs {
     position: absolute;
     width: 100%;
     left: 0;
     padding: 0 var(--offset);
-    flex-wrap: nowrap
+    bottom: 2.5rem
   }
   .app .main-screen__header {
     font-size: 2rem;
@@ -4102,4 +4297,85 @@ img {
   .app .footer a:hover {
     color: var(--color3)
   }
+}
+.app .color {
+  color: var(--color1)
+}
+.app .color2 {
+  color: var(--color3)
+}
+.app .color3 {
+  color: var(--color-kick)
+}
+.app .twitch-text {
+  color: #a048ff
+}
+.app .twitch-bg {
+  background: rgba(160,72,255,.15)
+}
+.app .twitch-bg-fill {
+  background: #522b90
+}
+.app .twitch-shadow {
+  box-shadow: 0 0 16px rgba(160,72,255,.8)
+}
+.app .trovo-text {
+  color: #19d66b
+}
+.app .trovo-bg {
+  background: rgba(25,214,107,.15)
+}
+.app .trovo-bg-fill {
+  background: #19d66b
+}
+.app .trovo-shadow {
+  box-shadow: 0 0 16px rgba(25,214,107,.8)
+}
+.app .kick-text {
+  color: #53fc18
+}
+.app .kick-bg {
+  background: rgba(83,252,24,.15)
+}
+.app .kick-bg-fill {
+  background: #263238
+}
+.app .kick-shadow {
+  box-shadow: 0 0 16px rgba(83,252,24,.8)
+}
+.app .youtube-text {
+  color: red
+}
+.app .youtube-bg {
+  background: rgba(255,0,0,.15)
+}
+.app .youtube-bg-fill {
+  background: red
+}
+.app .youtube-shadow {
+  box-shadow: 0 0 16px rgba(255,0,0,.8)
+}
+.app .discord-text {
+  color: #5165f6
+}
+.app .discord-bg {
+  background: rgba(81,101,246,.15)
+}
+.app .discord-bg-fill {
+  background: #5165f6
+}
+.app .discord-shadow {
+  box-shadow: 0 0 16px rgba(81,101,246,.8)
+}
+.app .dlive-text {
+  color: #ffd300
+}
+.app .dlive-bg {
+  background: rgba(255,211,0,.15)
+}
+.app .dlive-bg-fill {
+  background: #ffd300
+}
+.app .dlive-shadow {
+  box-shadow: 0 0 16px rgba(255,211,0,.8)
 }

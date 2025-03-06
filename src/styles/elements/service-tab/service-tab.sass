@@ -1,14 +1,41 @@
 .service-tab
-  +flex(row nowrap, center, center)
+  +flex(row nowrap, center, stretch)
   border-radius: 16px 16px 0 0
-  min-width: 31rem
   height: 7.5rem
-  padding: 2rem
+  background: white
+  width: 9.5rem
+  padding: 15px
+  &._active
+    padding: 15px 3.5rem
+    width: auto
+    ._big
+      display: block
+    ._mini
+      display: none
   img
     max-height: 100%
-  &._twitch
-    background: var(--bg-twitch)
-  &._kick
-    background: var(--bg-kick)
+  ._big
+    display: none
+
+.service-tabs
+  +flex(row nowrap, flex-start, flex-end)
+  gap: 3rem
+  &__btn
+    align-self: stretch
+    a
+      +flex(row nowrap, center, center)
+      height: 100%
+      width: fit-content
+      cursor: pointer
+      text-align: center
+      padding: 10px 2rem
+      font-weight: 600
+      text-transform: uppercase
+      transition: all 0.5s
+      min-width: 15rem
+      background: rgba(255, 255, 255, 0.1)
+      border: 1px solid rgba(255, 255, 255, 0.5)
+      border-radius: 12px 12px 0 0
+      border-bottom: none
 
 @import "media"
