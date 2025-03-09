@@ -750,6 +750,18 @@ button.swiper-pagination-bullet {
 .icon-calendar:before {
   content: "\e912"
 }
+.icon-businessman:before {
+  content: "\e913"
+}
+.icon-handshake:before {
+  content: "\e915"
+}
+.icon-tools:before {
+  content: "\e917"
+}
+.icon-support:before {
+  content: "\e918"
+}
 :root {
   --color1: #A048FF;
   --color2: #4A28A0;
@@ -850,7 +862,7 @@ img {
 .app input::-webkit-input-placeholder,
 .app select::-webkit-input-placeholder,
 .app textarea::-webkit-input-placeholder {
-  font-size: 16px;
+  font-size: inherit;
   font-weight: 400;
   color: rgba(255,255,255,.6);
   letter-spacing: .02em
@@ -858,7 +870,7 @@ img {
 .app input:-moz-placeholder,
 .app select:-moz-placeholder,
 .app textarea:-moz-placeholder {
-  font-size: 16px;
+  font-size: inherit;
   font-weight: 400;
   color: rgba(255,255,255,.6);
   letter-spacing: .02em
@@ -866,7 +878,7 @@ img {
 .app input::-moz-placeholder,
 .app select::-moz-placeholder,
 .app textarea::-moz-placeholder {
-  font-size: 16px;
+  font-size: inherit;
   font-weight: 400;
   color: rgba(255,255,255,.6);
   letter-spacing: .02em
@@ -874,7 +886,7 @@ img {
 .app input:-ms-input-placeholder,
 .app select:-ms-input-placeholder,
 .app textarea:-ms-input-placeholder {
-  font-size: 16px;
+  font-size: inherit;
   font-weight: 400;
   color: rgba(255,255,255,.6);
   letter-spacing: .02em
@@ -1064,7 +1076,8 @@ img {
   text-transform: uppercase;
   letter-spacing: .02em;
   transition: all .5s;
-  min-width: 24rem
+  min-width: 24rem;
+  color: #fff
 }
 .app .btn._alt {
   background: rgba(255,255,255,.06);
@@ -1461,15 +1474,19 @@ img {
   border: 1px solid rgba(255,255,255,.5);
   min-height: 5rem;
   color: #fff;
-  padding: 0 15px
+  padding: 0 15px;
+  font-size: inherit
 }
 .app .input._high {
   min-height: 7rem
 }
 .app textarea.input {
   min-height: 16rem;
-  padding: 15px;
+  padding: 2rem 15px;
   resize: none
+}
+.app textarea.input._high {
+  min-height: 22rem
 }
 .app .input-num {
   position: relative
@@ -1564,6 +1581,20 @@ img {
   align-items: center;
   gap: 4rem;
   font-size: 3.2rem
+}
+.app .social._big {
+  font-size: 6.8rem
+}
+.app .social a {
+  display: flex
+}
+@media (max-width:530px) {
+  .app .social {
+    gap: 2rem
+  }
+  .app .social._big {
+    font-size: 3.2rem
+  }
 }
 .app .step {
   display: grid;
@@ -1676,6 +1707,9 @@ img {
   align-items: flex-start;
   gap: 15px
 }
+.app .checkbox._center {
+  align-items: center
+}
 .app .checkbox input {
   display: none
 }
@@ -1703,6 +1737,15 @@ img {
   min-width: 2.4rem;
   height: 2.4rem;
   transition: all .5s
+}
+.app .checkbox__text {
+  font-size: 16px;
+  line-height: 1.7
+}
+@media (max-width:1500px) {
+  .app .checkbox__text {
+    font-size: 14px
+  }
 }
 @media (max-width:1023px) {
   .app .checkbox__label {
@@ -2009,6 +2052,55 @@ img {
     display: flex
   }
 }
+.app .contact {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem
+}
+.app .contact i.icon {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background: var(--color1);
+  font-size: 4rem;
+  width: 7.2rem;
+  height: 7.2rem;
+  min-width: 7.2rem
+}
+.app .contact__main {
+  display: grid;
+  gap: 10px
+}
+.app .contacts .contact {
+  padding-right: 5rem
+}
+@media (max-width:1200px) {
+  .app .contacts__decor {
+    display: none
+  }
+}
+@media (max-width:530px) {
+  .app .contact {
+    gap: 2rem
+  }
+  .app .contact .h5 {
+    font-size: 16px
+  }
+  .app .contact p {
+    font-size: 14px;
+    font-weight: 300
+  }
+  .app .contact i.icon {
+    font-size: 2.5rem;
+    width: 5rem;
+    min-width: 5rem;
+    height: 5rem
+  }
+}
 .app h1,
 .app h2,
 .app h3,
@@ -2023,10 +2115,10 @@ img {
 .app p {
   letter-spacing: .02em;
   line-height: 1.5;
-  font-size: 16px
+  font-size: 18px
 }
 .app p._big {
-  font-size: 18px;
+  font-size: 2rem;
   line-height: 1.35
 }
 .app .big-text {
@@ -2039,6 +2131,12 @@ img {
 }
 .app .relative {
   position: relative
+}
+.app .link {
+  color: var(--color1);
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none
 }
 .app .square721 {
   font-family: square721;
@@ -2057,12 +2155,22 @@ img {
   font-family: square721;
   text-transform: uppercase
 }
+.app .h1-alt {
+  font-size: 4.3rem;
+  letter-spacing: .02em;
+  font-weight: 700
+}
 .app .h2,
 .app .text h2 {
   font-size: 3.5rem;
   letter-spacing: .02em;
   font-family: square721;
   text-transform: uppercase
+}
+.app .h2-alt {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: .02em
 }
 .app .h3,
 .app .text h3 {
@@ -2147,7 +2255,7 @@ img {
   padding-bottom: 15rem;
   background-repeat: no-repeat;
   background-position: center left;
-  background-size: contain;
+  background-size: 100%,cover;
   position: relative;
   background-image: linear-gradient(69.81deg,var(--color9) 6.23%,var(--color8) 88.8%)
 }
@@ -2175,6 +2283,10 @@ img {
 }
 .app .block-bg._bg4 {
   background-image: url(../img/fig-13.png),linear-gradient(69.81deg,var(--color9) 6.23%,var(--color8) 88.8%);
+  background-position: bottom right
+}
+.app .block-bg._bg5 {
+  background-image: url(../img/fig-12.png),linear-gradient(69.81deg,var(--color9) 6.23%,var(--color8) 88.8%);
   background-position: bottom right
 }
 .app .block-bg2 {
@@ -2205,6 +2317,9 @@ img {
 .app .mb-10 {
   margin-bottom: 10rem
 }
+.app .mb-15 {
+  margin-bottom: 15rem
+}
 .app .mb-20 {
   margin-bottom: 20rem
 }
@@ -2221,6 +2336,9 @@ img {
   display: grid;
   gap: 5px
 }
+.app .grid * > * {
+  min-width: 0
+}
 .app .grid._gap-10 {
   gap: 10px
 }
@@ -2235,6 +2353,13 @@ img {
 }
 .app .grid._gap-40 {
   gap: 4rem
+}
+.app .grid._gap-60 {
+  gap: 6rem
+}
+.app .grid._col-2 {
+  grid-template-columns: 1fr 1fr;
+  align-items: start
 }
 .app .flag {
   height: 2.5rem
@@ -2338,6 +2463,26 @@ img {
   bottom: -30%;
   z-index: -1;
   max-width: 100rem
+}
+.app .decor__img._bg16 {
+  width: 120%;
+  left: -10%;
+  top: -10%;
+  transform: translateY(-25%);
+  z-index: -1;
+  max-width: initial
+}
+.app .decor__img._bg17 {
+  left: 0;
+  bottom: 100%;
+  z-index: -1;
+  width: 100%
+}
+.app .decor__img._bg18 {
+  right: 35%;
+  top: -3rem;
+  z-index: 1;
+  width: 13rem
 }
 .app .text {
   font-size: 18px;
@@ -2457,6 +2602,11 @@ img {
   .app .text._simple {
     font-size: 16px
   }
+  .app .text,
+  .app p,
+  .app p._big {
+    font-size: 16px
+  }
 }
 @media (max-width:1200px) {
   .app .h0 {
@@ -2466,12 +2616,25 @@ img {
   .app .text h1 {
     font-size: 4rem
   }
+  .app .h1-alt {
+    font-size: 3.6rem
+  }
   .app .h2,
   .app .text h2 {
     font-size: 3rem
   }
   .app .mb-20 {
     margin-bottom: 10rem
+  }
+  .app .mb-15 {
+    margin-bottom: 6rem
+  }
+  .app .grid._col-2 {
+    grid-template-columns: initial;
+    gap: 6rem
+  }
+  .app .decor._nb-hidden .decor__img {
+    display: none
   }
 }
 @media (max-width:1023px) {
@@ -2483,6 +2646,9 @@ img {
   }
   .app .mb-10 {
     margin-bottom: 6rem
+  }
+  .app .grid._gap-60 {
+    gap: 4rem
   }
   .app .block-bg {
     padding-top: 10rem;
@@ -2526,10 +2692,6 @@ img {
     padding-top: 6rem;
     padding-bottom: 6rem
   }
-  .app .text,
-  .app p._big {
-    font-size: 16px
-  }
   .app .list {
     font-size: 16px
   }
@@ -2542,6 +2704,10 @@ img {
   .app .h1,
   .app .text h1 {
     font-size: 3rem
+  }
+  .app .block-bg._mob-wide {
+    margin-left: calc(0px - var(--offset));
+    width: calc(100% + var(--offset) * 2)
   }
 }
 @media (max-width:530px) {
@@ -2587,6 +2753,9 @@ img {
   .app .text h1 {
     font-size: 2.8rem
   }
+  .app .h1-alt {
+    font-size: 3rem
+  }
   .app .h2,
   .app .text h2 {
     font-size: 2.2rem
@@ -2594,6 +2763,9 @@ img {
   .app .h3,
   .app .text h3 {
     font-size: 18px
+  }
+  .app .mb-15 {
+    margin-bottom: 4rem
   }
 }
 .app .advant {
@@ -3148,6 +3320,10 @@ img {
   display: grid;
   gap: 15px
 }
+.app .form.block-bg {
+  padding: 8.5rem 8rem 11rem 8rem;
+  gap: 4rem
+}
 .app .form__item {
   display: grid;
   gap: 10px
@@ -3169,7 +3345,18 @@ img {
   grid-template-columns: 1.5fr 1fr;
   gap: 2rem 4rem
 }
+.app .form__list {
+  display: grid;
+  gap: 2.4rem
+}
+.app .form__header {
+  display: grid;
+  gap: 2rem
+}
 @media (max-width:1023px) {
+  .app .form.block-bg {
+    padding: 5rem
+  }
   .app .form__cols {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(28rem,1fr));
@@ -3182,6 +3369,9 @@ img {
   }
 }
 @media (max-width:767px) {
+  .app .form.block-bg {
+    padding: 3rem
+  }
   .app .form__cols._mob-10 {
     gap: 10px
   }

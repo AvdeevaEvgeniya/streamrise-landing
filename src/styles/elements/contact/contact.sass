@@ -1,0 +1,20 @@
+.contact
+  +flex(row nowrap, flex-start, center)
+  gap: 3rem
+  i.icon
+    +flex(row nowrap, center, center)
+    border-radius: 100%
+    background: var(--color1)
+    font-size: 4rem
+    width: 7.2rem
+    height: 7.2rem
+    min-width: 7.2rem
+  &__main
+    display: grid
+    gap: 10px
+
+.contacts
+  .contact
+    padding-right: 5rem
+
+@import "media"

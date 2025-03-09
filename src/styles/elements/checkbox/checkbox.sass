@@ -1,6 +1,8 @@
 .checkbox
   +flex(row nowrap, flex-start, flex-start)
   gap: 15px
+  &._center
+    align-items: center
   input
     display: none
     &[type="radio"]
@@ -23,5 +25,8 @@
     min-width: 2.4rem
     height: 2.4rem
     transition: all 0.5s
+  &__text
+    font-size: 16px
+    line-height: 1.7
 
 @import "media"

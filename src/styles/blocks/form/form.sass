@@ -1,6 +1,9 @@
 .form
   display: grid
   gap: 15px
+  &.block-bg
+    padding: 8.5rem 8rem 11rem 8rem
+    gap: 4rem
   &__item
     display: grid
     gap: 10px
@@ -15,5 +18,11 @@
     &._2-1
       grid-template-columns: 1.5fr 1fr
       gap: 2rem 4rem
+  &__list
+    display: grid
+    gap: 2.4rem
+  &__header
+    display: grid
+    gap: 2rem
 
 @import "media"

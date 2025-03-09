@@ -2,16 +2,32 @@
   .text
     &._simple
       font-size: 16px
+  .text,
+  p._big, p
+    font-size: 16px
 
 +notebook()
   .h0
     font-size: 6rem
   .h1, .text h1
     font-size: 4rem
+  .h1-alt
+    font-size: 3.6rem
   .h2, .text h2
     font-size: 3rem
   .mb-20
     margin-bottom: 10rem
+  .mb-15
+    margin-bottom: 6rem
+  .grid
+    &._col-2
+      grid-template-columns: initial
+      gap: 6rem
+  .decor
+    &._nb-hidden
+      .decor
+        &__img
+          display: none
 
 +tablet()
   .big-text
@@ -20,6 +36,9 @@
     margin-bottom: 4rem
   .mb-10
     margin-bottom: 6rem
+  .grid
+    &._gap-60
+      gap: 4rem
   .block-bg
     padding-top: 10rem
     padding-bottom: 10rem
@@ -47,9 +66,6 @@
   .block-bg2
     padding-top: 6rem
     padding-bottom: 6rem
-  .text,
-  p._big
-    font-size: 16px
   .list
     font-size: 16px
     &._color
@@ -58,6 +74,10 @@
     font-size: 4rem
   .h1, .text h1
     font-size: 3rem
+  .block-bg
+    &._mob-wide
+      margin-left: calc(0px - var(--offset))
+      width: calc(100% + var(--offset) * 2)
 
 +small-mobile()
   .text-3-col
@@ -86,7 +106,11 @@
     font-size: 3rem
   .h1, .text h1
     font-size: 2.8rem
+  .h1-alt
+    font-size: 3rem
   .h2, .text h2
     font-size: 2.2rem
   .h3, .text h3
     font-size: 18px
+  .mb-15
+    margin-bottom: 4rem

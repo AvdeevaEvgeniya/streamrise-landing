@@ -6,9 +6,9 @@ h1, h2, h3, h4, h5, h6, p
 p
   letter-spacing: 0.02em
   line-height: 1.5
-  font-size: 16px
+  font-size: 18px
   &._big
-    font-size: 18px
+    font-size: 2rem
     line-height: 1.35
 .big-text
   font-size: 2rem
@@ -20,6 +20,11 @@ p
 .relative
   position: relative
 
+.link
+  color: var(--color1)
+  text-decoration: underline
+  text-decoration-skip-ink: none
+
 .square721
   font-family: "square721"
   text-transform: uppercase
@@ -29,19 +34,24 @@ p
   letter-spacing: -0.02em
   font-family: "square721"
   text-transform: uppercase
-
 .h1, .text h1
   font-size: 4.8rem
   letter-spacing: 0.02em
   font-family: "square721"
   text-transform: uppercase
-
+.h1-alt
+  font-size: 4.3rem
+  letter-spacing: 0.02em
+  font-weight: 700
 .h2, .text h2
   font-size: 3.5rem
   letter-spacing: 0.02em
   font-family: "square721"
   text-transform: uppercase
-
+.h2-alt
+  font-size: 3.2rem
+  font-weight: 700
+  letter-spacing: 0.02em
 .h3, .text h3
   font-size: 2.4rem
   letter-spacing: 0.02em
@@ -51,12 +61,10 @@ p
   font-size: 2.4rem
   font-weight: 700
   letter-spacing: 0.02em
-
 .h4
   font-size: 3.2rem
   letter-spacing: 1px
   font-family: "square721"
-
 .h5, .text h4
   font-size: 2.6rem
   letter-spacing: 0.02em
@@ -116,7 +124,7 @@ p
   padding-bottom: 15rem
   background-repeat: no-repeat
   background-position: center left
-  background-size: contain
+  background-size: 100%, cover
   position: relative
   background-image: linear-gradient(69.81deg, var(--color9) 6.23%, var(--color8) 88.8%)
   &:after
@@ -134,6 +142,9 @@ p
     background-position: right top
   &._bg4
     background-image: url("../img/fig-13.png"), linear-gradient(69.81deg, var(--color9) 6.23%, var(--color8) 88.8%)
+    background-position: bottom right
+  &._bg5
+    background-image: url("../img/fig-12.png"), linear-gradient(69.81deg, var(--color9) 6.23%, var(--color8) 88.8%)
     background-position: bottom right
 
 .block-bg2
@@ -156,6 +167,8 @@ p
   margin-bottom: 8rem
 .mb-10
   margin-bottom: 10rem
+.mb-15
+  margin-bottom: 15rem
 .mb-20
   margin-bottom: 20rem
 
@@ -169,6 +182,8 @@ p
 .grid
   display: grid
   gap: 5px
+  * > *
+    min-width: 0
   &._gap-10
     gap: 10px
   &._gap-15
@@ -179,6 +194,11 @@ p
     gap: 3rem
   &._gap-40
     gap: 4rem
+  &._gap-60
+    gap: 6rem
+  &._col-2
+    grid-template-columns: 1fr 1fr
+    align-items: start
 
 .flag
   height: 2.5rem
@@ -266,6 +286,23 @@ p
       bottom: -30%
       z-index: -1
       max-width: 100rem
+    &._bg16
+      width: 120%
+      left: -10%
+      top: -10%
+      transform: translateY(-25%)
+      z-index: -1
+      max-width: initial
+    &._bg17
+      left: 0
+      bottom: 100%
+      z-index: -1
+      width: 100%
+    &._bg18
+      right: 35%
+      top: -3rem
+      z-index: 1
+      width: 13rem
 .text
   font-size: 18px
   letter-spacing: 0.02em

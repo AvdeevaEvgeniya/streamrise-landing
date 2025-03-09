@@ -1,0 +1,47 @@
+h1.h0.mb-15 Контактная #[br]#[span.color информация]
+.grid._col-2
+    .contacts.grid._gap-60
+        img.contacts__decor(src="img/contacts-text.svg" alt="" loading='')
+        .contact
+            i.icon.icon-support
+            .contact__main
+                a.h5(href="mailto:support@yourdomain.com") support@yourdomain.com
+                p Клиентская техподдержка, вопросы общего характера
+        .contact
+            i.icon.icon-tools
+            .contact__main
+                a.h5(href="mailto:webmaster@yourdomain.com") webmaster@yourdomain.com
+                p Техническая поддержка для вебмастеров и владельцев площадок
+        .contact
+            i.icon.icon-user
+            .contact__main
+                a.h5(href="mailto:management@yourdomain.com") management@yourdomain.com
+                p Связаться с руководством
+        .contact
+            i.icon.icon-handshake
+            .contact__main
+                a.h5(href="mailto:partnership@yourdomain.com") partnership@yourdomain.com
+                p Предложения и сотрудничество
+        .social._big
+            a(href="")
+                i.icon.icon-ig
+            a(href="")
+                i.icon.icon-dc
+    .description__text.decor._nb-hidden
+        img.decor__img._bg16(src="img/bg-ellipse-3.png" alt="")
+        img.decor__img._bg17(src="img/decor-6.png" alt="")
+        img.decor__img._bg18.rellax(src="img/decor-7.png" alt="" data-rellax-speed="5" data-rellax-percentage="0.5")
+        form.form.block-bg._bg5._mob-wide
+            .form__header
+                .h1-alt Обратная связь
+                p Свяжитесь с нами через форму обратной связи или пообщайтесь с нашими специалистами поддержки в чате
+            .form__list
+                input.input._high(type="text" placeholder="Введите ваше имя или логин Twitch")
+                input.input._high(type="text" placeholder="Введите вашу почту")
+                textarea.input(placeholder="Введите ваше сообщение")
+                label.checkbox._center
+                    input(type="checkbox")
+                    span.checkbox__mask
+                    span.checkbox__text Нажимая кнопку “Отправить”, вы даёте согласие на обработку персональных данных и соглашаетесь с условиями #[a.link(href="") Политики конфиденциальности]
+            .form__btn
+        button.btn ОТПРАВИТЬ
