@@ -4606,7 +4606,7 @@ img {
     justify-content: space-between
   }
 }
-.app .article .toc {
+.app .article__toc {
   position: sticky;
   top: 12rem
 }
