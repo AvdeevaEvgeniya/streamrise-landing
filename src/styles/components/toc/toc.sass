@@ -1,0 +1,41 @@
+.toc
+  display: grid
+  gap: 3rem
+  max-height: calc(100dvh * 1.425 - 15rem)
+  max-height: calc(100vh * 1.425 - 15rem)
+  overflow-y: auto
+  overflow-x: clip
+  width: 100%
+  &::-webkit-scrollbar-track
+    background: var(--color3)
+    border-radius: 2rem
+  &::-webkit-scrollbar
+    width: 10px
+    height: auto
+  &::-webkit-scrollbar-thumb
+    background: black
+    border-radius: 2rem
+    border: 2px solid var(--color3)
+  &__list
+    display: grid
+    font-size: 2rem
+    font-weight: 500
+    counter-reset: list-counter 0
+    a
+      +flex(row nowrap, flex-start, center)
+      gap: 2rem
+      border-bottom: 1px solid var(--color12)
+      padding: 2rem 0
+      &:last-child
+        border-bottom: none
+      &:before
+        +flex(row nowrap, center, center)
+        content: counter(list-counter)
+        counter-increment: list-counter
+        width: 3.8rem
+        height: 3.8rem
+        min-width: 3.8rem
+        border-radius: 100%
+        background: var(--color1)
+
+@import "media"

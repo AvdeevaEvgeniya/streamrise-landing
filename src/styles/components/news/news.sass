@@ -1,0 +1,30 @@
+.news
+  border-radius: var(--radius)
+  padding: 3.9rem
+  background: rgba(139, 52, 233, 0.05) url("../img/bg-7.svg")
+  background-size: cover
+  background-position: right bottom
+  display: grid
+  gap: 10px
+  line-height: 2.8rem
+  p
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 6
+    line-clamp: 6
+    -webkit-box-orient: vertical
+  p
+    color: rgba(255, 255, 255, 0.7)
+  .btn
+    margin-top: 2.6rem
+  small
+    color: var(--color7)
+
+.news-slider
+  position: relative
+  .swiper-button-prev
+    left: -5rem
+  .swiper-button-next
+    right: -5rem
+
+@import "media"

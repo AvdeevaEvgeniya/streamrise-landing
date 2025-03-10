@@ -774,6 +774,8 @@ button.swiper-pagination-bullet {
   --color9: #22153D;
   --color10: #271552;
   --color11: #5B5A70;
+  --color12: #3A3546;
+  --color13: #B766FE;
   --color-kick: #53FC18;
   --bg-kick: #263238;
   --bg-twitch: #522B90;
@@ -1004,6 +1006,12 @@ img {
   font-family: icomoon;
   font-size: 4rem
 }
+.app .swiper-button-prev:after {
+  content: "\e909"
+}
+.app .swiper-button-next:after {
+  content: "\e908"
+}
 .app .swiper-pagination-bullet {
   background: #fff
 }
@@ -1090,6 +1098,15 @@ img {
   min-height: 5rem;
   min-width: 21rem
 }
+.app .btn._tiny {
+  min-height: 4.5rem;
+  min-width: initial;
+  color: var(--color13);
+  text-transform: initial;
+  font-weight: 400;
+  padding: 5px 15px;
+  border-radius: 5px
+}
 .app .btns {
   display: flex;
   flex-flow: row wrap;
@@ -1099,6 +1116,9 @@ img {
 }
 .app .btns._j-end {
   justify-content: flex-end
+}
+.app .btns._tiny {
+  gap: 10px
 }
 @media (max-width:1023px) {
   .app .btn {
@@ -1119,6 +1139,11 @@ img {
   .app .btn {
     width: 100%;
     min-width: initial
+  }
+  .app .btn._tiny {
+    width: -moz-fit-content;
+    width: fit-content;
+    min-height: 4rem
   }
   .app .btn._mob-fit {
     width: -moz-fit-content;
@@ -2484,6 +2509,23 @@ img {
   z-index: 1;
   width: 13rem
 }
+.app .decor__img._bg19 {
+  left: -42%;
+  top: -22%;
+  z-index: -1;
+  max-width: initial
+}
+.app .decor__img._bg20 {
+  left: -50%;
+  bottom: -10%;
+  z-index: -1;
+  max-width: initial
+}
+.app .page-bg-decor {
+  position: fixed;
+  left: 0;
+  top: 30%
+}
 .app .text {
   font-size: 18px;
   letter-spacing: .02em
@@ -2598,6 +2640,88 @@ img {
   background: var(--color6);
   padding: 5rem 4rem
 }
+.app .text-alt {
+  line-height: 1.5;
+  font-size: 2rem
+}
+.app .text-alt img {
+  border-radius: var(--radius)
+}
+.app .text-alt p {
+  color: rgba(255,255,255,.7)
+}
+.app .text-alt blockquote,
+.app .text-alt figure,
+.app .text-alt h1,
+.app .text-alt h2,
+.app .text-alt h3,
+.app .text-alt h4,
+.app .text-alt h5,
+.app .text-alt h6,
+.app .text-alt iframe,
+.app .text-alt img,
+.app .text-alt ol,
+.app .text-alt p,
+.app .text-alt picture,
+.app .text-alt table,
+.app .text-alt ul,
+.app .text-alt video {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  font-size: inherit
+}
+.app .text-alt blockquote:last-child,
+.app .text-alt figure:last-child,
+.app .text-alt h1:last-child,
+.app .text-alt h2:last-child,
+.app .text-alt h3:last-child,
+.app .text-alt h4:last-child,
+.app .text-alt h5:last-child,
+.app .text-alt h6:last-child,
+.app .text-alt iframe:last-child,
+.app .text-alt img:last-child,
+.app .text-alt ol:last-child,
+.app .text-alt p:last-child,
+.app .text-alt picture:last-child,
+.app .text-alt table:last-child,
+.app .text-alt ul:last-child,
+.app .text-alt video:last-child {
+  margin-bottom: 0
+}
+.app .text-alt blockquote:first-child,
+.app .text-alt figure:first-child,
+.app .text-alt h1:first-child,
+.app .text-alt h2:first-child,
+.app .text-alt h3:first-child,
+.app .text-alt h4:first-child,
+.app .text-alt h5:first-child,
+.app .text-alt h6:first-child,
+.app .text-alt iframe:first-child,
+.app .text-alt img:first-child,
+.app .text-alt ol:first-child,
+.app .text-alt p:first-child,
+.app .text-alt picture:first-child,
+.app .text-alt table:first-child,
+.app .text-alt ul:first-child,
+.app .text-alt video:first-child {
+  margin-top: 0
+}
+.app .text-alt h1 + *,
+.app .text-alt h2 + *,
+.app .text-alt h3 + *,
+.app .text-alt h4 + *,
+.app .text-alt h5 + *,
+.app .text-alt h6 + * {
+  margin-top: -2rem
+}
+.app .text-alt h2 {
+  font-size: 3rem;
+  font-weight: 700
+}
+.app .text-alt h3 {
+  font-size: 2.4rem;
+  font-weight: 700
+}
 @media (max-width:1500px) {
   .app .text._simple {
     font-size: 16px
@@ -2638,6 +2762,9 @@ img {
   }
 }
 @media (max-width:1023px) {
+  .app .text-alt {
+    font-size: 16px
+  }
   .app .big-text {
     font-size: 16px
   }
@@ -2665,6 +2792,7 @@ img {
     font-size: 3.5rem
   }
   .app .h2,
+  .app .h2-alt,
   .app .text h2 {
     font-size: 2.5rem
   }
@@ -2708,6 +2836,75 @@ img {
   .app .block-bg._mob-wide {
     margin-left: calc(0px - var(--offset));
     width: calc(100% + var(--offset) * 2)
+  }
+  .app .text-alt h2 {
+    font-size: 2.2rem
+  }
+  .app .text-alt h3 {
+    font-size: 18px
+  }
+  .app .text-alt blockquote,
+  .app .text-alt figure,
+  .app .text-alt h1,
+  .app .text-alt h2,
+  .app .text-alt h3,
+  .app .text-alt h4,
+  .app .text-alt h5,
+  .app .text-alt h6,
+  .app .text-alt iframe,
+  .app .text-alt img,
+  .app .text-alt ol,
+  .app .text-alt p,
+  .app .text-alt picture,
+  .app .text-alt table,
+  .app .text-alt ul,
+  .app .text-alt video {
+    margin-top: 3rem;
+    margin-bottom: 3rem
+  }
+  .app .text-alt blockquote:last-child,
+  .app .text-alt figure:last-child,
+  .app .text-alt h1:last-child,
+  .app .text-alt h2:last-child,
+  .app .text-alt h3:last-child,
+  .app .text-alt h4:last-child,
+  .app .text-alt h5:last-child,
+  .app .text-alt h6:last-child,
+  .app .text-alt iframe:last-child,
+  .app .text-alt img:last-child,
+  .app .text-alt ol:last-child,
+  .app .text-alt p:last-child,
+  .app .text-alt picture:last-child,
+  .app .text-alt table:last-child,
+  .app .text-alt ul:last-child,
+  .app .text-alt video:last-child {
+    margin-bottom: 0
+  }
+  .app .text-alt blockquote:first-child,
+  .app .text-alt figure:first-child,
+  .app .text-alt h1:first-child,
+  .app .text-alt h2:first-child,
+  .app .text-alt h3:first-child,
+  .app .text-alt h4:first-child,
+  .app .text-alt h5:first-child,
+  .app .text-alt h6:first-child,
+  .app .text-alt iframe:first-child,
+  .app .text-alt img:first-child,
+  .app .text-alt ol:first-child,
+  .app .text-alt p:first-child,
+  .app .text-alt picture:first-child,
+  .app .text-alt table:first-child,
+  .app .text-alt ul:first-child,
+  .app .text-alt video:first-child {
+    margin-top: 0
+  }
+  .app .text-alt h1 + *,
+  .app .text-alt h2 + *,
+  .app .text-alt h3 + *,
+  .app .text-alt h4 + *,
+  .app .text-alt h5 + *,
+  .app .text-alt h6 + * {
+    margin-top: -10px
   }
 }
 @media (max-width:530px) {
@@ -2983,14 +3180,8 @@ img {
 .app .product-slider .swiper-button-prev {
   left: 2.5rem
 }
-.app .product-slider .swiper-button-prev:after {
-  content: "\e909"
-}
 .app .product-slider .swiper-button-next {
   right: 2.5rem
-}
-.app .product-slider .swiper-button-next:after {
-  content: "\e908"
 }
 .app .product-slider .swiper-pagination {
   display: none
@@ -3198,6 +3389,162 @@ img {
     height: 4rem;
     font-size: 2rem
   }
+}
+.app .news {
+  border-radius: var(--radius);
+  padding: 3.9rem;
+  background: rgba(139,52,233,.05) url(../img/bg-7.svg);
+  background-size: cover;
+  background-position: right bottom;
+  display: grid;
+  gap: 10px;
+  line-height: 2.8rem
+}
+.app .news p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  -webkit-box-orient: vertical
+}
+.app .news p {
+  color: rgba(255,255,255,.7)
+}
+.app .news .btn {
+  margin-top: 2.6rem
+}
+.app .news small {
+  color: var(--color7)
+}
+.app .news-slider {
+  position: relative
+}
+.app .news-slider .swiper-button-prev {
+  left: -5rem
+}
+.app .news-slider .swiper-button-next {
+  right: -5rem
+}
+@media (max-width:1500px) {
+  .app .news-slider .swiper-button-prev {
+    left: -2rem
+  }
+  .app .news-slider .swiper-button-next {
+    right: -2rem
+  }
+}
+@media (max-width:767px) {
+  .app .news-slider {
+    margin-left: calc(0px - var(--offset));
+    width: calc(100% + var(--offset) * 2)
+  }
+  .app .news-slider .swiper-button-next,
+  .app .news-slider .swiper-button-prev {
+    display: none
+  }
+  .app .news-slider .swiper {
+    padding: 0 var(--offset)
+  }
+  .app .news {
+    padding: 2rem
+  }
+}
+.app .toc {
+  display: grid;
+  gap: 3rem;
+  max-height: calc(142.5dvh - 15rem);
+  max-height: calc(142.5vh - 15rem);
+  overflow-y: auto;
+  overflow-x: clip;
+  width: 100%
+}
+.app .toc::-webkit-scrollbar-track {
+  background: var(--color3);
+  border-radius: 2rem
+}
+.app .toc::-webkit-scrollbar {
+  width: 10px;
+  height: auto
+}
+.app .toc::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 2rem;
+  border: 2px solid var(--color3)
+}
+.app .toc__list {
+  display: grid;
+  font-size: 2rem;
+  font-weight: 500;
+  counter-reset: list-counter 0
+}
+.app .toc__list a {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid var(--color12);
+  padding: 2rem 0
+}
+.app .toc__list a:last-child {
+  border-bottom: none
+}
+.app .toc__list a:before {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  content: counter(list-counter);
+  counter-increment: list-counter;
+  width: 3.8rem;
+  height: 3.8rem;
+  min-width: 3.8rem;
+  border-radius: 100%;
+  background: var(--color1)
+}
+@media (max-width:767px) {
+  .app .toc {
+    gap: 2rem
+  }
+  .app .toc__list {
+    font-size: 18px;
+    font-weight: 400
+  }
+  .app .toc__list a {
+    padding: 10px 0
+  }
+}
+@media (max-width:530px) {
+  .app .toc__list {
+    font-size: 16px
+  }
+  .app .toc__list a {
+    gap: 15px
+  }
+  .app .toc__list a:before {
+    width: 3rem;
+    height: 3rem;
+    min-width: 3rem
+  }
+}
+.app .person-info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem
+}
+.app .person-info__img {
+  width: 9rem;
+  min-width: 9rem;
+  height: 9rem;
+  border-radius: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.app .person-info__main {
+  display: grid;
+  gap: 10px
 }
 .app .services {
   display: grid;
@@ -4253,6 +4600,115 @@ img {
   .app .order__info {
     width: 100%;
     justify-content: space-between
+  }
+}
+.app .article .toc {
+  position: sticky;
+  top: 12rem
+}
+.app .article__body {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 48.5rem 1fr;
+  position: relative
+}
+.app .article__col {
+  display: grid;
+  gap: 8rem;
+  align-content: start
+}
+.app .article__text {
+  padding: 6rem 5rem
+}
+.app .article__author {
+  display: grid
+}
+.app .article__author-btn {
+  padding-left: 11rem
+}
+.app .article__header {
+  display: grid;
+  gap: 3rem
+}
+.app .article__info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--color7);
+  gap: 2rem
+}
+.app .article__info > * {
+  border-right: 1px solid;
+  padding-right: 2rem;
+  line-height: 1
+}
+.app .article__info > :last-child {
+  border-right: none
+}
+@media (max-width:1400px) {
+  .app .article {
+    position: relative
+  }
+  .app .article .toc._active .toc__list {
+    display: grid
+  }
+  .app .article .toc._active .toc__title:after {
+    transform: rotate(180deg)
+  }
+  .app .article .toc__title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center
+  }
+  .app .article .toc__title:after {
+    content: "\e905";
+    font-family: icomoon;
+    transition: all .5s
+  }
+  .app .article .toc__list {
+    display: none
+  }
+  .app .article__toc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--color4);
+    border-radius: var(--radius);
+    padding: 3rem;
+    z-index: 5;
+    width: 50%
+  }
+  .app .article__body {
+    grid-template-columns: initial
+  }
+}
+@media (max-width:1023px) {
+  .app .article__toc {
+    position: static;
+    width: 100%
+  }
+  .app .article__text {
+    padding: 3rem
+  }
+  .app .article__col {
+    gap: 4rem
+  }
+}
+@media (max-width:530px) {
+  .app .article__info {
+    display: grid;
+    gap: 5px
+  }
+  .app .article__info > * {
+    border: none;
+    padding: 0
+  }
+  .app .article__text {
+    margin-left: calc(0px - var(--offset));
+    width: calc(100% + var(--offset) * 2);
+    padding: 3rem var(--offset)
   }
 }
 .app .header {

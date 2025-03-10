@@ -1,0 +1,18 @@
++widescreen()
+  .news-slider
+    .swiper-button-prev
+      left: -2rem
+    .swiper-button-next
+      right: -2rem
+
++mobile()
+  .news-slider
+    margin-left: calc(0px - var(--offset))
+    width: calc(100% + var(--offset) * 2)
+    .swiper-button-prev,
+    .swiper-button-next
+      display: none
+    .swiper
+      padding: 0 var(--offset)
+  .news
+    padding: 2rem
