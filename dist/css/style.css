@@ -777,6 +777,7 @@ button.swiper-pagination-bullet {
   --color-kick: #53FC18;
   --bg-kick: #263238;
   --bg-twitch: #522B90;
+  --error: #FF3D3D;
   --offset: 8rem;
   --radius-mini: 2.6rem;
   --radius: 3.2rem
@@ -1479,6 +1480,9 @@ img {
 }
 .app .input._high {
   min-height: 7rem
+}
+.app .input._error {
+  border-color: var(--error)
 }
 .app textarea.input {
   min-height: 16rem;
@@ -2246,6 +2250,9 @@ img {
   background-clip: text;
   text-fill-color: transparent
 }
+.app .error-text {
+  color: var(--error)
+}
 .app .unnderline {
   border-bottom: 1px solid
 }
@@ -2378,8 +2385,7 @@ img {
 .app .decor__img._bg1 {
   width: 21rem;
   right: 14rem;
-  bottom: -13rem;
-  mix-blend-mode: hard-light
+  bottom: -13rem
 }
 .app .decor__img._bg2 {
   width: 17.5rem;
@@ -2389,20 +2395,17 @@ img {
 .app .decor__img._bg3 {
   width: 17.5rem;
   left: 14rem;
-  bottom: -9rem;
-  mix-blend-mode: hard-light
+  bottom: -9rem
 }
 .app .decor__img._bg4 {
   width: 10rem;
   right: 3rem;
-  top: -6.5rem;
-  mix-blend-mode: hard-light
+  top: -6.5rem
 }
 .app .decor__img._bg5 {
   width: 17rem;
   left: 7.5rem;
-  bottom: -7.5rem;
-  mix-blend-mode: hard-light
+  bottom: -7.5rem
 }
 .app .decor__img._bg6 {
   left: -30%;
@@ -3530,7 +3533,8 @@ img {
 }
 .app .megamenu {
   position: relative;
-  text-transform: none
+  text-transform: none;
+  cursor: pointer
 }
 .app .megamenu._active .megamenu__drop,
 .app .megamenu:hover .megamenu__drop {
@@ -4263,6 +4267,8 @@ img {
   padding-top: 2.3rem;
   padding-bottom: 2.3rem;
   background: rgba(255,255,255,.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255,255,255,.5);
   border-top: none;
   border-radius: 0 0 16px 16px;
@@ -4282,6 +4288,7 @@ img {
   align-items: center;
   flex-grow: 1;
   font-weight: 600;
+  font-size: 14px;
   font-size: 14px;
   text-transform: uppercase;
   gap: 6rem
@@ -4394,7 +4401,7 @@ img {
   .app .header__btns {
     gap: 2rem;
     transition: all .5s;
-    opacity: 0;
+    opacity: 1;
     pointer-events: none
   }
   .app .header__toggle:checked ~ .header .header__btns {
