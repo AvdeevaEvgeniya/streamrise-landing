@@ -1,13 +1,29 @@
 .select
   position: relative
   z-index: 3
+  &._size-l
+    min-width: 48rem
+    .select
+      &__options
+        max-width: 100%
+  &._size-m
+    min-width: 30rem
+    .select
+      &__options
+        max-width: 100%
+  &._size-s
+    min-width: 22rem
+    .select
+      &__options
+        max-width: 100%
   &._active
     z-index: 6
     .select
       &__options
         display: grid
+        &._row
+          +flex(row wrap, flex-start, center)
       &__main
-        border-radius: 12px 12px 0 0
         &:after
           transform: rotate(180deg)
   &__main
@@ -45,18 +61,20 @@
       display: block
   &__options
     position: absolute
-    top: 100%
+    top: calc(100% + 15px)
     left: 0
     width: max-content
-    background: #3d2d64
+    //background: #3d2d64
+    background: rgba(49, 39, 69, 0.95)
     border: 1px solid rgba(255, 255, 255, .5)
-    border-radius: 0 0 12px 12px
+    border-radius: 12px
     display: none
     overflow-y: auto
     z-index: 5
-    padding: 15px
+    padding: 2rem
     gap: 15px
     min-width: 100%
+    max-height: 41rem
     &::-webkit-scrollbar-track
       background: var(--color3)
     &::-webkit-scrollbar
@@ -73,15 +91,43 @@
     cursor: pointer
     &._choosed
       pointer-events: none
-      color: var(--color3)
+      color: #de90fd
   &__value
     +flex(row nowrap, flex-start, center)
     flex-grow: 1
     overflow: hidden
     gap: 10px
+    &._multiple
+      +font(16px, 300, rgba(255, 255, 255, 0.8))
+      flex-grow: initial
+  &__label
+    & + .select
+      &__value
+        &:before
+          content: "/"
   &__placeholder
     pointer-events: none
     white-space: nowrap
     text-overflow: ellipsis
     overflow: hidden
     color: rgba(255, 255, 255, 0.6)
+  &__btn
+    +flex(row nowrap, flex-start, center)
+    padding: 10px 5rem 10px 2rem
+    gap: 10px
+    background: rgba(49, 39, 69, 0.95)
+    border: 1px solid rgba(255, 255, 255, .5)
+    border-radius: 12px
+    min-height: 6rem
+    position: relative
+    cursor: pointer
+    &:after
+      content: "\e91a"
+      font-family: "icomoon"
+      font-size: 10px
+      position: absolute
+      right: 2rem
+      top: 50%
+      transform: translateY(-50%)
+
+@import "media"

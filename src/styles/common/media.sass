@@ -1,4 +1,8 @@
 +widescreen()
+  .page-banner
+    padding-right: 60%
+    img
+      right: 2rem
   .page-body
     grid-template-columns: initial
 
@@ -9,6 +13,9 @@
     margin-bottom: 4rem
 
 +tablet()
+  .page-banner
+    min-height: initial
+
   .section
     &__title
       p
@@ -17,6 +24,12 @@
       align-items: flex-end
 
 +mobile()
+  .page-banner
+    padding: 0
+    img
+      position: static
+      justify-self: center
+
   .section
     &__header
       display: grid

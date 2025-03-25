@@ -1,0 +1,81 @@
++widescreen()
+  .filter
+    gap: 15px
+    &__inputs
+      gap: 15px
+    &__main
+      gap: 15px
+
+  .filter-tags
+    font-size: inherit
+
++custom-adaptive(max, 1300px)
+  .filter-mob
+    display: flex
+    .select__btn
+      min-height: 4rem
+
+  .filter
+    position: fixed
+    left: 0
+    top: 0
+    display: grid
+    z-index: 30
+    background: rgba(255, 255, 255, .06)
+    backdrop-filter: blur(20px)
+    padding: var(--offset)
+    width: fit-content
+    height: 100%
+    align-content: start
+    gap: 3rem
+    overflow-y: auto
+    max-width: 50rem
+    overflow-x: clip
+    display: none
+    &::-webkit-scrollbar-track
+      background: var(--color3)
+    &::-webkit-scrollbar
+      width: 10px
+      height: auto
+    &::-webkit-scrollbar-thumb
+      background: black
+      border-radius: 2rem
+      border: 2px solid var(--color3)
+    & > *
+      min-width: 0
+    .select
+      min-width: 100%
+    .select__options
+      position: static
+      margin-top: 5px
+      max-height: initial
+    &__inputs
+      gap: 15px
+      display: grid
+      justify-content: stretch
+    &__header
+      display: flex
+    &__main
+      display: grid
+      order: 1
+      justify-content: stretch
+    &__btns
+      display: flex
+      order: 2
+      .btn
+        color: white
+    &__sort
+      display: none
+    &__toggle
+      &:checked
+        & ~ .filter
+          display: grid
+    &__close
+      font-size: 2.5rem
+
+  .filter-tags
+    font-size: 14px
+    a
+      min-height: 3rem
+    a._reset
+      display: none

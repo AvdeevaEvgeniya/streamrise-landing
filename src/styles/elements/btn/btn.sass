@@ -13,6 +13,7 @@
   transition: all 0.5s
   min-width: 24rem
   color: white
+  gap: 10px
   &._alt
     background: rgba(255, 255, 255, 0.06)
     border: 1px solid rgba(255, 255, 255, 0.5)
@@ -29,6 +30,24 @@
     font-weight: 400
     padding: 5px 15px
     border-radius: 5px
+  &._clear
+    background: none
+
+.tag-btn
+  span
+    +flex(row nowrap, center, center)
+    border: 1px solid rgba(255, 255, 255, 0.5)
+    border-radius: 5px
+    padding: 5px 10px
+    transition: all 0.5s
+    text-align: center
+    min-height: 4rem
+  input
+    display: none
+    &:checked
+      & ~ span
+        color: #de90fd
+        border-color: rgba(255, 255, 255, 0.7)
 
 .btns
   +flex(row wrap, flex-start, stretch)

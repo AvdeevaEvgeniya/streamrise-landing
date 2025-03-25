@@ -1,12 +1,16 @@
 .news
   border-radius: var(--radius)
-  padding: 3.9rem
+  padding: 4rem
   background: rgba(139, 52, 233, 0.05) url("../img/bg-7.svg")
   background-size: cover
   background-position: right bottom
   display: grid
   gap: 10px
   line-height: 2.8rem
+  overflow: hidden
+  align-content: start
+  &._big
+    grid-column: span 2
   p
     overflow: hidden
     display: -webkit-box
@@ -19,6 +23,21 @@
     margin-top: 2.6rem
   small
     color: var(--color7)
+  img
+    margin: -4rem -4rem 0 -4rem
+    max-width: calc(100% + 8rem)
+    object-fit: cover
+    aspect-ratio: 1 / 0.5
+
+.news-list
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 4rem
+
+.news-block
+  padding: 7rem
+  display: grid
+  gap: 4rem
 
 .news-slider
   position: relative

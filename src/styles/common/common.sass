@@ -126,6 +126,21 @@ img, iframe
     +flex(row nowrap, space-between, center)
     gap: 4rem 2rem
     margin-bottom: 6.5rem
+  .page-banner
+    display: grid
+    gap: 2rem
+    position: relative
+    padding: 5rem 65% 5rem 0
+    min-height: 40rem
+    align-content: center
+    z-index: 2
+    img
+      position: absolute
+      max-height: 100%
+      right: 20rem
+      bottom: 0
+      z-index: -1
+      max-width: 60%
   .swiper-slide
     display: block
     transform-style: preserve-3d
@@ -153,7 +168,7 @@ img, iframe
 
 +custom-adaptive(min, 1501px)
   .common
-    zoom: 0.7
+    zoom: 0.8
 
 +custom-adaptive(min, 2000px)
   .common

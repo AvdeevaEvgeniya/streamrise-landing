@@ -1,0 +1,61 @@
+.filter
+  display: grid
+  gap: 2rem
+  &__main
+    +flex(row nowrap, space-between, center)
+    gap: 3rem
+  &__inputs
+    +flex(row nowrap, flex-start, center)
+    gap: 3rem
+  &__header
+    +flex(row nowrap, space-between, center)
+    gap: 2rem
+    display: none
+  &__btns
+    +flex(row nowrap, space-between, center)
+    gap: 2rem
+    display: none
+  &__open
+    +flex(row wrap, flex-start, center)
+    gap: 10px
+  &__toggle
+    display: none
+
+.filter-mob
+  +flex(row nowrap, space-between, center)
+  display: none
+
+.filter-tags
+  +flex(row wrap, flex-start, center)
+  gap: 10px
+  font-weight: 300
+  font-size: 18px
+  & > span
+    opacity: 0.5
+  a
+    +flex(row wrap, center, center)
+    border-radius: 5px
+    border: 1px solid rgba(255, 255, 255, 0.3)
+    padding: 5px 3.5rem 5px 10px
+    min-height: 3.5rem
+    color: rgba(255, 255, 255, 0.8)
+    transition: all 0.5s
+    position: relative
+    &:hover:not([class*="_reset"])
+      text-decoration: line-through
+      text-decoration-color: #ff4f38
+    &:after
+      content: "\e90c"
+      font-family: "icomoon"
+      color: #FF4F38
+      font-size: 16px
+      position: absolute
+      right: 10px
+      top: 50%
+      transform: translateY(-50%)
+    &._reset
+      color: white
+      border-color: transparent
+      font-weight: 400
+
+@import "media"

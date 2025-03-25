@@ -133,9 +133,10 @@ p
   &:after
     +full()
     content: ""
-    background: url("../img/pock-1.png") no-repeat center
+    background: url("../img/pock-1.png") no-repeat center top
     border-radius: 4rem
     pointer-events: none
+    background-size: cover
   &._bg1
     background-image: url("../img/fig-1.png"), linear-gradient(69.81deg, var(--color9) 6.23%, var(--color8) 88.8%)
   &._bg2
@@ -185,7 +186,7 @@ p
 .grid
   display: grid
   gap: 5px
-  * > *
+  & > *
     min-width: 0
   &._gap-10
     gap: 10px
@@ -236,20 +237,23 @@ p
       left: 7.5rem
       bottom: -7.5rem
     &._bg6
-      left: -30%
-      bottom: -30%
+      left: 0
+      bottom: 0
       z-index: -1
       max-width: initial
+      transform: translate(-20%, 20%)
     &._bg7
-      right: -30%
-      top: -50%
+      right: 0
+      top: 0
       z-index: -1
       max-width: initial
+      transform: translate(30%, -20%)
     &._bg8
-      left: -30%
-      top: -30%
+      left: 0
+      top: 0
       z-index: -1
       max-width: initial
+      transform: translate(-25%, -20%)
     &._bg9
       width: 17.5rem
       right: 0
@@ -265,9 +269,9 @@ p
       z-index: -1
     &._bg12
       width: 120%
-      left: -10%
+      left: 0
       top: 0
-      transform: translateY(-25%)
+      transform: translate(-8%, -25%)
       z-index: -1
       max-width: initial
     &._bg13
@@ -280,15 +284,16 @@ p
       bottom: 100%
       z-index: -1
     &._bg15
-      right: -55%
-      bottom: -30%
+      right: 0
+      bottom: 0
       z-index: -1
       max-width: 100rem
+      transform: translate(30%, 28%)
     &._bg16
       width: 120%
-      left: -10%
-      top: -10%
-      transform: translateY(-25%)
+      left: 0
+      top: 0
+      transform: translate(-9%, -40%)
       z-index: -1
       max-width: initial
     &._bg17
@@ -302,20 +307,42 @@ p
       z-index: 1
       width: 13rem
     &._bg19
-      left: -42%
-      top: -22%
+      left: 0
+      top: 0
       z-index: -1
       max-width: initial
+      transform: translate(-25%, -25%)
     &._bg20
-      left: -50%
-      bottom: -10%
+      left: 0
+      bottom: 0
       z-index: -1
       max-width: initial
+      transform: translate(-25%, 10%)
+    &._bg21
+      left: 0
+      bottom: 0
+      z-index: -1
+      max-width: initial
+      transform: translate(-20%, 20%)
+    &._bg22
+      right: 0
+      top: 0
+      transform: translate(15%, -35%)
+      z-index: -1
+      max-width: 80%
 
 .page-bg-decor
   position: fixed
   left: 0
   top: 30%
+
+.close
+  color: #FF4F38
+  font-size: 16px
+  display: flex
+  &:after
+    content: "\e90c"
+    font-family: "icomoon"
 
 .text
   font-size: 18px

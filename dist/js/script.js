@@ -284,8 +284,8 @@ initNoSwipe = function () {
     });
 }
 
-initSliders();
 initNoSwipe();
+initSliders();
 
 const initToggleVideo = function () {
     if (!document.querySelector(".full-video")) {

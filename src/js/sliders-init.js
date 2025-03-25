@@ -124,5 +124,5 @@ initNoSwipe = function () {
     });
 }
 
-initSliders();
 initNoSwipe();
+initSliders();
