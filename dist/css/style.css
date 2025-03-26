@@ -847,7 +847,8 @@ img {
   width: 100%;
   z-index: 1;
   max-width: 1860px;
-  margin: 0 auto
+  margin: 0 auto;
+  background: linear-gradient(180deg,#190c33 0,#241641 100%)
 }
 .app__wrapper {
   overflow-x: clip
