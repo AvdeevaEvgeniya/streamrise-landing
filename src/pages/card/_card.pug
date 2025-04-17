@@ -1,0 +1,30 @@
+.card.mb-10
+    .card__img
+        img(src="img/product.png" alt="")
+    .card__main
+        .card__header
+            h1.h2 #[span.color накрутка зрителей]/Часовые пакеты/Опытный
+            .rating
+                label.fav
+                    input(type="checkbox")
+                    i.icon.icon-heart
+                img(src="img/star-4.svg" alt="")
+                .rating__links
+                    .rating__link
+                        a(href="") 6 Отзывов
+                    .rating__link
+                        a(href="") Написать отзыв
+        .card__form
+            b.h1.color 5.800 ₽
+            .card__inputs
+                input.input._high(type="text" placeholder="Введите ссылку на ваш канал")
+                .select._high
+                    .select__main.input
+                        .select__placeholder Количество
+                        input.select__input(type="text")
+                    .select__options
+                        .select__option(data-value="5") 5
+                        .select__option(data-value="10") 10
+                        .select__option(data-value="15") 15
+                        .select__option(data-value="20") 20
+            a.btn(href="") ЗАКАЗАТЬ

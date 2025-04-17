@@ -6,6 +6,13 @@
   gap: 5.5rem
   align-content: start
   grid-auto-rows: auto 1fr auto
+  overflow: hidden
+  &._alt
+    background: none
+    padding: 0
+    gap: 3rem
+    .feedback__name
+      gap: 3rem
   &__header
     +flex(row nowrap, space-between, center)
     gap: 2rem
@@ -34,11 +41,26 @@
       border-radius: 100%
       display: block
       background: white
+  &__avatar
+    width: 10rem
+    aspect-ratio: 1/1
+  &__title
+    display: grid
+    gap: 2rem
 
 .feedbacks
   display: grid
   grid-template-columns: repeat(3, 1fr)
   gap: 6rem
   grid-auto-rows: 35rem
+
+.feedback-slider
+  position: relative
+  .swiper-button-prev
+    left: -5rem
+  .swiper-button-next
+    right: -5rem
+  &__title
+    margin-bottom: 4rem
 
 @import "media"

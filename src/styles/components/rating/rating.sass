@@ -1,0 +1,51 @@
+.rating
+  +flex(row nowrap, flex-start, center)
+  gap: 3rem
+  &__stars
+    +flex(row-reverse nowrap, center, center)
+    gap: 5px
+    font-size: 3rem
+    color: var(--color8)
+    i.icon
+      &:after,
+      &:before
+        transition: all 0.5s
+    input
+      display: none
+      &:checked
+        & ~ label i.icon
+          &:after,
+          &:before
+            color: var(--color2)
+  &__link
+    a
+      text-decoration: underline
+      text-decoration-skip-ink: none
+      text-decoration-thickness: 1px
+    &:after
+      content: "/"
+      margin-left: 10px
+    &:last-child
+      &:after
+        content: none
+  &__links
+    +flex(row nowrap, flex-start, center)
+    gap: 10px
+
+.rating-input
+  +flex(row nowrap, flex-start, center)
+  gap: 3.5rem
+
++media-hover()
+  .rating
+    &__stars
+      label
+        &:hover
+          i.icon
+            &:after,
+            &:before
+              color: var(--color2)
+          & ~ label i.icon
+            &:after,
+            &:before
+              color: var(--color2)

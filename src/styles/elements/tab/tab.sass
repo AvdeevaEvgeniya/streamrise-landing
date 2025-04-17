@@ -11,7 +11,33 @@
     color: var(--color1)
     font-weight: 700
 
+.tab-alt
+  +flex(row nowrap, center, center)
+  transition: all 0.5s
+  background: rgba(255, 255, 255, 0.06)
+  border: 1px solid rgba(255, 255, 255, 0.5)
+  border-bottom: none
+  border-radius: 10px 10px 0 0
+  padding: 10px 3rem
+  min-height: 5.8rem
+  text-align: center
+  font-weight: 600
+  letter-spacing: 0.02em
+  text-transform: uppercase
+  min-width: 24rem
+  transition: all 0.5s
+  &._active
+    background: var(--color1)
+    min-height: 7.4rem
+    border-color: var(--color1)
+    min-width: 31rem
+
 .tabs
   +flex(row nowrap, center, center)
+
+.tabs-alt
+  +flex(row nowrap, flex-start, flex-end)
+  gap: 4rem
+  padding-left: 8rem
 
 @import "media"

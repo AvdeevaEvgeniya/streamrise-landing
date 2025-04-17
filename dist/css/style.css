@@ -771,6 +771,14 @@ button.swiper-pagination-bullet {
 .icon-sort:before {
   content: "\e91b"
 }
+.icon-star:after {
+  content: "\e91d";
+  margin-left: -1.0302734375em;
+  color: #fff
+}
+.icon-star:before {
+  content: "\e91c"
+}
 :root {
   --color1: #A048FF;
   --color2: #4A28A0;
@@ -1405,11 +1413,44 @@ img {
   color: var(--color1);
   font-weight: 700
 }
+.app .tab-alt {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.5);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  padding: 10px 3rem;
+  min-height: 5.8rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  min-width: 24rem;
+  transition: all .5s
+}
+.app .tab-alt._active {
+  background: var(--color1);
+  min-height: 7.4rem;
+  border-color: var(--color1);
+  min-width: 31rem
+}
 .app .tabs {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center
+}
+.app .tabs-alt {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 4rem;
+  padding-left: 8rem
 }
 @media (max-width:1023px) {
   .app .tab {
@@ -1994,6 +2035,9 @@ img {
   position: relative;
   z-index: 3
 }
+.app .select._high .select__main {
+  min-height: 7rem
+}
 .app .select._size-l {
   min-width: 48rem
 }
@@ -2306,6 +2350,24 @@ img {
     height: 5rem
   }
 }
+.app .fav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background: var(--color1);
+  padding: 10px;
+  border-radius: 10px
+}
+.app .fav i.icon {
+  transition: all .5s
+}
+.app .fav input {
+  display: none
+}
+.app .fav input:checked ~ i.icon {
+  color: #ab0101
+}
 .app h1,
 .app h2,
 .app h3,
@@ -2350,14 +2412,14 @@ img {
 .app .h0 {
   font-size: 7.3rem;
   letter-spacing: -.02em;
-  font-family: square721;
+  font-family: square721,sans-serif;
   text-transform: uppercase
 }
 .app .h1,
 .app .text h1 {
   font-size: 4.8rem;
   letter-spacing: .02em;
-  font-family: square721;
+  font-family: square721,sans-serif;
   text-transform: uppercase
 }
 .app .h1-alt {
@@ -2369,7 +2431,7 @@ img {
 .app .text h2 {
   font-size: 3.5rem;
   letter-spacing: .02em;
-  font-family: square721;
+  font-family: square721,sans-serif;
   text-transform: uppercase
 }
 .app .h2-alt {
@@ -2381,7 +2443,7 @@ img {
 .app .text h3 {
   font-size: 2.4rem;
   letter-spacing: .02em;
-  font-family: square721;
+  font-family: square721,sans-serif;
   text-transform: uppercase
 }
 .app .h3-alt {
@@ -2392,7 +2454,7 @@ img {
 .app .h4 {
   font-size: 3.2rem;
   letter-spacing: 1px;
-  font-family: square721
+  font-family: square721,sans-serif
 }
 .app .h5,
 .app .text h4 {
@@ -2498,6 +2560,10 @@ img {
   background-image: url(../img/fig-12.png),linear-gradient(69.81deg,var(--color9) 6.23%,var(--color8) 88.8%);
   background-position: bottom right
 }
+.app .block-bg._bg6 {
+  background-image: url(../img/fig-15.png),linear-gradient(69.81deg,var(--color9) 6.23%,var(--color8) 88.8%);
+  background-position: bottom right
+}
 .app .block-bg2 {
   border-radius: 4rem;
   padding-top: 10rem;
@@ -2566,6 +2632,9 @@ img {
 .app .grid._gap-60 {
   gap: 6rem
 }
+.app .grid._gap-100 {
+  gap: 10rem
+}
 .app .grid._col-2 {
   grid-template-columns: 1fr 1fr;
   align-items: start
@@ -2587,7 +2656,8 @@ img {
 .app .decor__img._bg1 {
   width: 21rem;
   right: 14rem;
-  bottom: -13rem
+  bottom: -13rem;
+  mix-blend-mode: hard-light
 }
 .app .decor__img._bg2 {
   width: 17.5rem;
@@ -2597,17 +2667,20 @@ img {
 .app .decor__img._bg3 {
   width: 17.5rem;
   left: 14rem;
-  bottom: -9rem
+  bottom: -9rem;
+  mix-blend-mode: hard-light
 }
 .app .decor__img._bg4 {
   width: 10rem;
   right: 3rem;
-  top: -6.5rem
+  top: -6.5rem;
+  mix-blend-mode: hard-light
 }
 .app .decor__img._bg5 {
   width: 17rem;
   left: 7.5rem;
-  bottom: -7.5rem
+  bottom: -7.5rem;
+  mix-blend-mode: hard-light
 }
 .app .decor__img._bg6 {
   left: 0;
@@ -2638,7 +2711,8 @@ img {
 .app .decor__img._bg10 {
   width: 16rem;
   left: 15rem;
-  top: -8rem
+  top: -8rem;
+  mix-blend-mode: hard-light
 }
 .app .decor__img._bg11 {
   width: 100%;
@@ -2719,6 +2793,12 @@ img {
   transform: translate(15%,-35%);
   z-index: -1;
   max-width: 80%
+}
+.app .decor__img._bg23 {
+  width: 17.5rem;
+  right: 13rem;
+  top: -12rem;
+  mix-blend-mode: hard-light
 }
 .app .page-bg-decor {
   position: fixed;
@@ -3510,7 +3590,16 @@ img {
   display: grid;
   gap: 5.5rem;
   align-content: start;
-  grid-auto-rows: auto 1fr auto
+  grid-auto-rows: auto 1fr auto;
+  overflow: hidden
+}
+.app .feedback._alt {
+  background: 0 0;
+  padding: 0;
+  gap: 3rem
+}
+.app .feedback._alt .feedback__name {
+  gap: 3rem
 }
 .app .feedback__header {
   display: flex;
@@ -3557,11 +3646,31 @@ img {
   display: block;
   background: #fff
 }
+.app .feedback__avatar {
+  width: 10rem;
+  aspect-ratio: 1/1
+}
+.app .feedback__title {
+  display: grid;
+  gap: 2rem
+}
 .app .feedbacks {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 6rem;
   grid-auto-rows: 35rem
+}
+.app .feedback-slider {
+  position: relative
+}
+.app .feedback-slider .swiper-button-prev {
+  left: -5rem
+}
+.app .feedback-slider .swiper-button-next {
+  right: -5rem
+}
+.app .feedback-slider__title {
+  margin-bottom: 4rem
 }
 @media (max-width:1500px) {
   .app .feedbacks {
@@ -3852,6 +3961,70 @@ img {
 .app .pagination a._arrow {
   border-color: transparent
 }
+.app .rating {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem
+}
+.app .rating__stars {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 3rem;
+  color: var(--color8)
+}
+.app .rating__stars i.icon:after,
+.app .rating__stars i.icon:before {
+  transition: all .5s
+}
+.app .rating__stars input {
+  display: none
+}
+.app .rating__stars input:checked ~ label i.icon:after,
+.app .rating__stars input:checked ~ label i.icon:before {
+  color: var(--color2)
+}
+.app .rating__link a {
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 1px
+}
+.app .rating__link:after {
+  content: "/";
+  margin-left: 10px
+}
+.app .rating__link:last-child:after {
+  content: none
+}
+.app .rating__links {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px
+}
+.app .rating-input {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3.5rem
+}
+@media (hover:hover) and (pointer:fine) {
+  .app .rating__stars label:hover i.icon:after,
+  .app .rating__stars label:hover i.icon:before {
+    color: var(--color2)
+  }
+  .app .rating__stars label:hover ~ label i.icon:after,
+  .app .rating__stars label:hover ~ label i.icon:before {
+    color: var(--color2)
+  }
+}
 .app .services {
   display: grid;
   gap: 5rem
@@ -4093,6 +4266,9 @@ img {
 .app .description._col-2-1 {
   grid-template-columns: 1fr 65rem
 }
+.app .description._col-3-1 {
+  grid-template-columns: 1fr 50rem
+}
 .app .description .btn {
   margin-top: 2rem
 }
@@ -4103,10 +4279,6 @@ img {
 .app .description__bg {
   max-width: 80%;
   margin-left: auto
-}
-.app .description ul {
-  list-style: disc;
-  margin-left: 1rem
 }
 @media (max-width:1500px) {
   .app .description__bg {
@@ -5226,6 +5398,36 @@ img {
     width: calc(100% + var(--offset) * 2);
     padding: 3rem var(--offset)
   }
+}
+.app .card {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 10rem
+}
+.app .card__img {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  background: rgba(255,255,255,.05);
+  padding: 20%
+}
+.app .card__main {
+  display: grid;
+  gap: 6rem
+}
+.app .card__header {
+  display: grid;
+  gap: 2rem
+}
+.app .card__form {
+  display: grid;
+  gap: 4rem
+}
+.app .card__inputs {
+  display: grid;
+  gap: 2.4rem
 }
 .app .header {
   display: flex;

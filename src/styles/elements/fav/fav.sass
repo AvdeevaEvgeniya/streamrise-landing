@@ -1,0 +1,12 @@
+.fav
+  +flex(row nowrap, center, center)
+  background: var(--color1)
+  padding: 10px
+  border-radius: 10px
+  i.icon
+    transition: all 0.5s
+  input
+    display: none
+    &:checked
+      & ~ i.icon
+        color: #ab0101
