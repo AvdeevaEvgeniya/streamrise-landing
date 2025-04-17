@@ -2,6 +2,14 @@
   .tab
     font-size: 2rem
     padding: 0 2rem
+  .tab-alt
+    min-width: initial
+    &._active
+      min-width: 20rem
+      min-height: 7rem
+  .tabs-alt
+    gap: 3rem
+    padding-left: 4rem
 
 +small-mobile()
   .tab
@@ -16,6 +24,17 @@
   .tabs
     flex-wrap: wrap
     gap: 10px
+
+  .tab-alt
+    min-height: initial
+    padding: 15px 2rem
+    &._active
+      min-width: initial
+      min-height: initial
+
+  .tabs-alt
+    gap: 2rem
+    padding-left: 0
 
 +media-hover()
   .tab

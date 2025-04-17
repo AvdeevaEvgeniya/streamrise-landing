@@ -1108,6 +1108,10 @@ img {
     margin-bottom: 3rem;
     gap: 2rem
   }
+  .app .mob-full {
+    margin: 0 calc(0px - var(--offset));
+    width: calc(100% + var(--offset) * 2)
+  }
 }
 @media (min-width:1501px) {
   .common {
@@ -1457,6 +1461,17 @@ img {
     font-size: 2rem;
     padding: 0 2rem
   }
+  .app .tab-alt {
+    min-width: initial
+  }
+  .app .tab-alt._active {
+    min-width: 20rem;
+    min-height: 7rem
+  }
+  .app .tabs-alt {
+    gap: 3rem;
+    padding-left: 4rem
+  }
 }
 @media (max-width:530px) {
   .app .tab {
@@ -1471,6 +1486,18 @@ img {
   .app .tabs {
     flex-wrap: wrap;
     gap: 10px
+  }
+  .app .tab-alt {
+    min-height: initial;
+    padding: 15px 2rem
+  }
+  .app .tab-alt._active {
+    min-width: initial;
+    min-height: initial
+  }
+  .app .tabs-alt {
+    gap: 2rem;
+    padding-left: 0
   }
 }
 @media (hover:hover) and (pointer:fine) {
@@ -2223,6 +2250,11 @@ img {
   }
   .app .select__option {
     padding: 2px 0
+  }
+}
+@media (max-width:530px) {
+  .app .select._high .select__main {
+    min-height: 6rem
   }
 }
 .app .alert {
@@ -3044,7 +3076,7 @@ img {
   }
   .app .grid._col-2 {
     grid-template-columns: initial;
-    gap: 6rem
+    gap: 5rem
   }
   .app .decor._nb-hidden .decor__img {
     display: none
@@ -3596,7 +3628,8 @@ img {
 .app .feedback._alt {
   background: 0 0;
   padding: 0;
-  gap: 3rem
+  gap: 3rem;
+  border-radius: 0
 }
 .app .feedback._alt .feedback__name {
   gap: 3rem
@@ -3691,6 +3724,14 @@ img {
 @media (max-width:767px) {
   .app .feedback {
     padding: 3rem
+  }
+  .app .feedback-slider .swiper {
+    margin: 0 calc(0px - var(--offset));
+    padding: 0 var(--offset)
+  }
+  .app .feedback-slider .swiper-button-next,
+  .app .feedback-slider .swiper-button-prev {
+    display: none
   }
 }
 @media (max-width:530px) {
@@ -3963,7 +4004,7 @@ img {
 }
 .app .rating {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
   gap: 3rem
@@ -4290,7 +4331,8 @@ img {
     grid-template-columns: initial
   }
   .app .description._col-1-2,
-  .app .description._col-2-1 {
+  .app .description._col-2-1,
+  .app .description._col-3-1 {
     grid-template-columns: initial
   }
   .app .description__bg {
@@ -5428,6 +5470,43 @@ img {
 .app .card__inputs {
   display: grid;
   gap: 2.4rem
+}
+@media (max-width:1500px) {
+  .app .card {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem
+  }
+  .app .card__main {
+    gap: 4rem
+  }
+}
+@media (max-width:1200px) {
+  .app .card {
+    grid-template-columns: initial
+  }
+  .app .card__img {
+    padding: 5rem
+  }
+  .app .card__img img {
+    max-height: 20rem
+  }
+}
+@media (max-width:530px) {
+  .app .card {
+    gap: 3rem
+  }
+  .app .card__img {
+    padding: 3rem
+  }
+  .app .card__img img {
+    max-height: 15rem
+  }
+  .app .card__main {
+    gap: 3rem
+  }
+  .app .card__form {
+    gap: 3rem
+  }
 }
 .app .header {
   display: flex;
