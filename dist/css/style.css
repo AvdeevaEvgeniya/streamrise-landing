@@ -1017,6 +1017,17 @@ img {
   align-content: center;
   z-index: 2
 }
+.app .page-banner._alt img {
+  right: 10rem;
+  max-height: 35rem
+}
+.app .page-banner._with-tab {
+  padding-bottom: 0;
+  align-content: end
+}
+.app .page-banner._with-tab .btn {
+  margin-top: 4rem
+}
 .app .page-banner img {
   position: absolute;
   max-height: 100%;
@@ -1058,6 +1069,9 @@ img {
   .app .page-banner {
     padding-right: 60%
   }
+  .app .page-banner._alt img {
+    right: 0
+  }
   .app .page-banner img {
     right: 2rem
   }
@@ -1066,6 +1080,9 @@ img {
   }
 }
 @media (max-width:1200px) {
+  .app .no-nb {
+    display: none
+  }
   .app .inner._pt {
     padding-top: 12rem
   }
@@ -1074,8 +1091,18 @@ img {
   }
 }
 @media (max-width:1023px) {
+  .app .no-tablet {
+    display: none
+  }
   .app .page-banner {
-    min-height: initial
+    min-height: initial;
+    padding-top: 0
+  }
+  .app .page-banner._alt {
+    padding-right: 0
+  }
+  .app .page-banner._alt img {
+    display: none
   }
   .app .section__title p {
     font-size: 16px
@@ -1107,10 +1134,6 @@ img {
   .app .page-header {
     margin-bottom: 3rem;
     gap: 2rem
-  }
-  .app .mob-full {
-    margin: 0 calc(0px - var(--offset));
-    width: calc(100% + var(--offset) * 2)
   }
 }
 @media (min-width:1501px) {
@@ -1148,6 +1171,12 @@ img {
   min-width: 24rem;
   color: #fff;
   gap: 10px
+}
+.app .btn._tab {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 5px 6rem;
+  font-size: 16px
 }
 .app .btn._alt {
   background: rgba(255,255,255,.06);
@@ -1497,7 +1526,7 @@ img {
   }
   .app .tabs-alt {
     gap: 2rem;
-    padding-left: 0
+    padding: 0 var(--offset)
   }
 }
 @media (hover:hover) and (pointer:fine) {
@@ -2671,6 +2700,9 @@ img {
   grid-template-columns: 1fr 1fr;
   align-items: start
 }
+.app .grid._align-c {
+  align-items: center
+}
 .app .flag {
   height: 2.5rem
 }
@@ -2831,6 +2863,12 @@ img {
   right: 13rem;
   top: -12rem;
   mix-blend-mode: hard-light
+}
+.app .decor__img._bg24 {
+  right: 26%;
+  top: -2rem;
+  z-index: 1;
+  width: 14rem
 }
 .app .page-bg-decor {
   position: fixed;
@@ -3625,6 +3663,9 @@ img {
   grid-auto-rows: auto 1fr auto;
   overflow: hidden
 }
+.app .feedback._alt-bg {
+  background: rgba(139,52,233,.05) url(../img/pock-5.png) no-repeat right bottom
+}
 .app .feedback._alt {
   background: 0 0;
   padding: 0;
@@ -3693,6 +3734,10 @@ img {
   gap: 6rem;
   grid-auto-rows: 35rem
 }
+.app .feedbacks._autoheight {
+  grid-auto-rows: initial;
+  gap: 4rem
+}
 .app .feedback-slider {
   position: relative
 }
@@ -3707,6 +3752,9 @@ img {
 }
 @media (max-width:1500px) {
   .app .feedbacks {
+    gap: 2.5rem
+  }
+  .app .feedbacks._autoheight {
     gap: 2.5rem
   }
 }
@@ -3843,8 +3891,6 @@ img {
 }
 @media (max-width:1023px) {
   .app .news-block {
-    margin-left: calc(0px - var(--offset));
-    width: calc(100% + var(--offset) * 2);
     padding: 3rem var(--offset)
   }
   .app .news-list {
@@ -4017,6 +4063,14 @@ img {
   gap: 5px;
   font-size: 3rem;
   color: var(--color8)
+}
+.app .rating__stars._alt {
+  font-size: 4.4rem;
+  justify-content: start;
+  gap: 15px
+}
+.app .rating__stars i.icon:after {
+  color: var(--color3)
 }
 .app .rating__stars i.icon:after,
 .app .rating__stars i.icon:before {
@@ -4237,7 +4291,7 @@ img {
 }
 @media (max-width:767px) {
   .app .form.block-bg {
-    padding: 3rem
+    padding: 3rem var(--offset)
   }
   .app .form__cols._mob-10 {
     gap: 10px

@@ -1,0 +1,34 @@
+.grid._col-2._align-c
+    img.no-nb(src="img/banner-15.png" alt="")
+    .decor
+        img.decor__img._bg19(src="img/circle-bg.svg" alt="")
+        form.form.block-bg._bg5
+            .form__header
+                .h1-alt Оставить отзыв
+                p Свяжитесь с нами через форму обратной связи или пообщайтесь с нашими специалистами поддержки в чате
+            .form__list
+                .rating__stars._alt
+                    input(type="radio" name="rating" id="star5")
+                    label(for="star5")
+                        i.icon.icon-star
+                    input(type="radio" name="rating" id="star4")
+                    label(for="star4")
+                        i.icon.icon-star
+                    input(type="radio" name="rating" id="star3")
+                    label(for="star3")
+                        i.icon.icon-star
+                    input(type="radio" name="rating" id="star2")
+                    label(for="star2")
+                        i.icon.icon-star
+                    input(type="radio" name="rating" id="star1")
+                    label(for="star1")
+                        i.icon.icon-star
+                input.input._high(type="text" placeholder="Введите ваше имя или логин Twitch")
+                input.input._high(type="email" placeholder="Введите вашу почту")
+                textarea.input(placeholder="Введите ваше сообщение")
+                label.checkbox._center
+                    input(type="checkbox")
+                    span.checkbox__mask
+                    span.checkbox__text Нажимая кнопку “Отправить”, вы даёте согласие на обработку персональных данных и соглашаетесь с условиями #[a.link(href="") Политики конфиденциальности]
+            .form__btn
+                button.btn ОТПРАВИТЬ

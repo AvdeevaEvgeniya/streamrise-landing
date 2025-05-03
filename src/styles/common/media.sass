@@ -1,20 +1,32 @@
 +widescreen()
   .page-banner
     padding-right: 60%
+    &._alt
+      img
+        right: 0
     img
       right: 2rem
   .page-body
     grid-template-columns: initial
 
 +notebook()
+  .no-nb
+    display: none
   .inner._pt
     padding-top: 12rem
   .page-header
     margin-bottom: 4rem
 
 +tablet()
+  .no-tablet
+    display: none
   .page-banner
     min-height: initial
+    padding-top: 0
+    &._alt
+      padding-right: 0
+      img
+        display: none
 
   .section
     &__title
@@ -43,6 +55,3 @@
   .page-header
     margin-bottom: 3rem
     gap: 2rem
-  .mob-full
-    margin: 0 calc(0px - var(--offset))
-    width: calc(100% + var(--offset) * 2)
