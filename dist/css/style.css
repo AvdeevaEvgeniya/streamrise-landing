@@ -2171,7 +2171,7 @@ img {
 }
 .app .select__options {
   position: absolute;
-  top: calc(100% + 15px);
+  top: calc(100% + 8px);
   left: 0;
   width: max-content;
   background: rgba(49,39,69,.95);

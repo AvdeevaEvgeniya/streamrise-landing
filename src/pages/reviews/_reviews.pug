@@ -8,6 +8,143 @@ section.news-block.mb-20.block-bg.decor
     img.decor__img._bg22(src="img/bg-ellipse-3.png" alt="")
     img.decor__img._bg1.rellax(src="img/fig-8.png" alt="" data-rellax-speed="5" data-rellax-percentage="0.5" style="transform: translate3d(0px, -33px, 0px);")
     img.decor__img._bg24.rellax(src="img/decor-7.png" alt="" data-rellax-speed="5" data-rellax-percentage="0.5" style="transform: translate3d(0px, -50px, 0px);")
+    input.filter__toggle#filter-toggle(type="checkbox")
+    .filter-mob
+        label.filter__open(for="filter-toggle")
+            i.icon.icon-filter
+            span Фильтры
+        .select._size-s._active
+            .select__btn
+                i.icon.icon-sort
+                .select__value По дате
+            .select__options
+                a.select__option._choosed(href="") По дате
+                a.select__option(href="") По популярности
+                a.select__option(href="") По рейтингу
+    .filter
+        .filter__header
+            .h5 Фильтры
+            label.filter__close(for="filter-toggle")
+                i.icon.icon-close
+        .filter__main
+            .filter__inputs
+                .select._size-l._active
+                    .select__btn
+                        .select__label Темы
+                        .select__value._multiple (выбрано: 3)
+                        a.close(href="")
+                    .select__options._row
+                        label.tag-btn
+                            input(type="checkbox")
+                            span #Новости
+                        label.tag-btn
+                            input(type="checkbox")
+                            span #Зрители
+                        label.tag-btn
+                            input(type="checkbox")
+                            span #Канал
+                        label.tag-btn
+                            input(type="checkbox")
+                            span #Накрутка
+                        label.tag-btn
+                            input(type="checkbox")
+                            span #Реклама
+                        label.tag-btn
+                            input(type="checkbox")
+                            span #Доходность
+                        label.tag-btn
+                            input(type="checkbox")
+                            span #Продвижение
+                        label.tag-btn
+                            input(type="checkbox")
+                            span #Блокировка
+                .select._size-m._active
+                    .select__btn
+                        .select__label Сервисы
+                        .select__value._multiple (выбрано: 3)
+                        a.close(href="")
+                    .select__options
+                        label.checkbox
+                            input(type="checkbox")
+                            span.checkbox__mask
+                            span.checkbox__label #Twitch
+                        label.checkbox
+                            input(type="checkbox")
+                            span.checkbox__mask
+                            span.checkbox__label #Trovo
+                        label.checkbox
+                            input(type="checkbox")
+                            span.checkbox__mask
+                            span.checkbox__label #Youtube
+                        label.checkbox
+                            input(type="checkbox")
+                            span.checkbox__mask
+                            span.checkbox__label #Discord
+                        label.checkbox
+                            input(type="checkbox")
+                            span.checkbox__mask
+                            span.checkbox__label #Tiktok
+                        label.checkbox
+                            input(type="checkbox")
+                            span.checkbox__mask
+                            span.checkbox__label #Telegram
+                        label.checkbox
+                            input(type="checkbox")
+                            span.checkbox__mask
+                            span.checkbox__label #Dlive
+                        label.checkbox
+                            input(type="checkbox")
+                            span.checkbox__mask
+                            span.checkbox__label #Kick
+                        label.checkbox
+                            input(type="checkbox")
+                            span.checkbox__mask
+                            span.checkbox__label #Instagram
+                .select._size-m._active
+                    .select__btn
+                        .select__label Авторы
+                        .select__value._multiple (выбрано: 3)
+                        a.close(href="")
+                    .select__options
+                        label.checkbox
+                            input(type="checkbox")
+                            span.checkbox__mask
+                            span.checkbox__label Александр Кравцов
+                        label.checkbox
+                            input(type="checkbox")
+                            span.checkbox__mask
+                            span.checkbox__label Василий Васильев
+                        label.checkbox
+                            input(type="checkbox")
+                            span.checkbox__mask
+                            span.checkbox__label Камелия Ахиджакова
+                        label.checkbox
+                            input(type="checkbox")
+                            span.checkbox__mask
+                            span.checkbox__label Моцарт
+            .filter__sort
+                .select._size-s._active
+                    .select__btn
+                        i.icon.icon-sort
+                        .select__value По дате
+                    .select__options
+                        a.select__option._choosed(href="") По дате
+                        a.select__option(href="") По популярности
+                        a.select__option(href="") По рейтингу
+        .filter-tags
+            a(href="") #Зрители
+            a(href="") #Доходность
+            a(href="") #Продвижение
+            span |
+            a(href="") #Twitch
+            span |
+            a(href="") Александр Кравцов
+            a(href="") Камелия Ахиджакова
+            a._reset(href="") Сбросить все
+        .filter__btns
+            a.btn._tiny(href="") Применить
+            a.btn._tiny._clear(href="") Сбросить все
+                span.close
     .feedbacks._autoheight
         .feedback._alt-bg
             .feedback__header
